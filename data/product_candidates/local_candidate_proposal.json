@@ -1,0 +1,79 @@
+{
+  "created_at": "2026-05-14T16:30:59.613830+00:00",
+  "status": "local_candidate_proposed",
+  "source": "local_ai_existing_amazon_research_pool",
+  "slot": 8,
+  "slug": "external-ssd-ai-model-storage",
+  "title": "External SSD for AI Model Storage",
+  "category": "Storage",
+  "recommended_candidates": [
+    {
+      "product_name": "Crucial X9 2TB Portable SSD",
+      "brand": "Crucial",
+      "amazon_url": "https://www.amazon.com/Crucial-2TB-Portable-SSD-CT2000X9SSD902/dp/B0CGW18S6Y",
+      "asin": "B0CGW18S6Y",
+      "why_it_fits": "Amazon-listed 2TB portable SSD candidate for carrying model files, datasets, and local AI project backups.",
+      "important_specs_to_verify": [
+        "2TB capacity",
+        "USB-C",
+        "Portable external SSD",
+        "Up to 1050MB/s class listing"
+      ],
+      "risk_notes": [
+        "External SSD speed depends on host USB port.",
+        "Not a replacement for internal NVMe for all workloads.",
+        "Good beginner storage candidate."
+      ],
+      "confidence": "high",
+      "live_eligible_after_chris_affiliate_link_review": false
+    },
+    {
+      "product_name": "Samsung T9 Portable SSD 2TB",
+      "brand": "Samsung",
+      "amazon_url": "https://www.amazon.com/SAMSUNG-Portable-Professionals-MU-PG2T0B-AM/dp/B0CHFS9K14",
+      "asin": "B0CHFS9K14",
+      "why_it_fits": "Amazon-listed fast 2TB portable SSD for moving large models and project files between machines.",
+      "important_specs_to_verify": [
+        "2TB capacity",
+        "USB 3.2 Gen 2x2",
+        "Portable SSD",
+        "Up to 2000MB/s class listing"
+      ],
+      "risk_notes": [
+        "Requires compatible USB port for best speeds.",
+        "May be more expensive than simpler portable SSDs.",
+        "Good premium storage candidate."
+      ],
+      "confidence": "high",
+      "live_eligible_after_chris_affiliate_link_review": false
+    }
+  ],
+  "local_ai_recommendation": {
+    "product_name": "Crucial X9 2TB Portable SSD",
+    "brand": "Crucial",
+    "amazon_url": "https://www.amazon.com/Crucial-2TB-Portable-SSD-CT2000X9SSD902/dp/B0CGW18S6Y",
+    "asin": "B0CGW18S6Y",
+    "why_it_fits": "Amazon-listed 2TB portable SSD candidate for carrying model files, datasets, and local AI project backups.",
+    "important_specs_to_verify": [
+      "2TB capacity",
+      "USB-C",
+      "Portable external SSD",
+      "Up to 1050MB/s class listing"
+    ],
+    "risk_notes": [
+      "External SSD speed depends on host USB port.",
+      "Not a replacement for internal NVMe for all workloads.",
+      "Good beginner storage candidate."
+    ],
+    "confidence": "high",
+    "live_eligible_after_chris_affiliate_link_review": false
+  },
+  "cloud_clarification_required": true,
+  "human_approval_required": true,
+  "affiliate_link_changes_allowed": false,
+  "product_swap_allowed": false,
+  "git_commit_allowed": false,
+  "git_push_allowed": false,
+  "publish_allowed": false,
+  "next_required_gate": "cloud_ai_candidate_clarification"
+}
