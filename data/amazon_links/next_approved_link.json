@@ -1,0 +1,14 @@
+{
+  "status": "awaiting_next_chris_approved_link",
+  "slot": null,
+  "slug": "",
+  "product_name": "",
+  "brand": "",
+  "asin": "",
+  "amazon_url": "",
+  "approved_affiliate_url": "",
+  "approved_by_chris": false,
+  "live_enabled": false,
+  "button_text": "Check on Amazon",
+  "notes": "Paste the next Chris-approved Amazon affiliate URL here, then set approved_by_chris and live_enabled to true."
+}
