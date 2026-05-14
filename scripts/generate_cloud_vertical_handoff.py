@@ -4,7 +4,7 @@ Generate active cloud vertical research handoff.
 State:
 - Reads cloud vertical research queue.
 - Chooses the first vertical packet.
-- Writes one durable handoff for the large/cloud AI.
+- Writes one durable handoff for large/cloud AI.
 
 Safety:
 - Handoff only.
@@ -86,7 +86,7 @@ def build_handoff() -> dict:
 
 
 def render_markdown(handoff: dict) -> str:
-    """Render active handoff as Markdown."""
+    """Render handoff as Markdown."""
     return f"""# Active Cloud Vertical Research Handoff
 
 Status: `{handoff["status"]}`
@@ -96,24 +96,20 @@ Vertical: `{handoff["vertical_slug"]}`
 Site angle:
 {handoff["site_angle"]}
 
-## Source Packet
-
+Source packet:
 `{handoff["source_packet"]}`
 
-## Target Result File
-
+Target result file:
 `{handoff["target_result_file"]}`
 
-## Required Result
-
+Required:
 - Exactly `{handoff["required_result_count"]}` Amazon-only products.
 - Status must be `{handoff["required_result_status"]}`.
 - Do not create affiliate links.
 - Do not invent prices, ratings, reviews, or discounts.
 - Chris approval is required before site creation or publishing.
 
-## Safety Locks
-
+Safety locks:
 - Affiliate link changes allowed: `{handoff["affiliate_link_changes_allowed"]}`
 - Product swap allowed: `{handoff["product_swap_allowed"]}`
 - Git commit allowed: `{handoff["git_commit_allowed"]}`

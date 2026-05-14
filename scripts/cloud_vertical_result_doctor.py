@@ -2,7 +2,7 @@
 Validate active cloud vertical research result.
 
 State:
-- Reads the active cloud vertical handoff.
+- Reads active cloud vertical handoff.
 - Validates the handoff target result file.
 - Cloud AI must not create affiliate links.
 - Chris must approve before site creation or publishing.
@@ -55,7 +55,6 @@ def active_target() -> tuple[str, Path]:
     handoff = load_json(HANDOFF)
     slug = str(handoff.get("vertical_slug", "home-organization"))
     target = Path(str(handoff.get("target_result_file", FALLBACK_RESULT)))
-
     return slug, target
 
 
@@ -68,7 +67,6 @@ def validate_item(item: dict[str, Any]) -> list[str]:
     """Validate one cloud-researched item."""
     problems: list[str] = []
     slug = item.get("page_slug", "unknown")
-
     required = ["slot", "page_slug", "page_title", "product_name", "brand", "amazon_url"]
 
     for key in required:
