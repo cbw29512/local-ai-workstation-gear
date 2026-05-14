@@ -1,0 +1,41 @@
+{
+  "status": "cloud_candidate_clarified",
+  "created_by": "large_ai_clarification",
+  "slot": 8,
+  "slug": "external-ssd-ai-model-storage",
+  "final_decision": "approve",
+  "best_candidate_product_name": "Crucial X9 2TB Portable SSD",
+  "best_candidate_brand": "Crucial",
+  "best_candidate_asin": "B0CGW18S6Y",
+  "best_candidate_amazon_url": "https://www.amazon.com/Crucial-2TB-Portable-SSD-CT2000X9SSD902/dp/B0CGW18S6Y",
+  "backup_candidate_product_name": "Samsung T9 Portable SSD 2TB",
+  "backup_candidate_asin": "B0CHFS9K14",
+  "reasons": [
+    "Better beginner/default fit for external AI model storage.",
+    "2TB portable SSD capacity fits the page use case.",
+    "USB-C portable storage is broadly useful for local model files, project backups, and moving files between machines.",
+    "Simpler positioning than the Samsung T9 because it does not depend on users understanding USB 3.2 Gen 2x2 speed limits."
+  ],
+  "risk_notes": [
+    "Do not claim exact real-world speed without testing.",
+    "Do not publish price, rating, review count, or discount unless verified at publish time.",
+    "External SSD speed depends on the user's USB port and cable.",
+    "Not a replacement for internal NVMe storage for every workload."
+  ],
+  "page_angle": "Beginner-friendly portable storage for local AI models, datasets, project files, and backups.",
+  "chris_approval_checklist": [
+    "Chris confirms this is the product to use for Slot 8.",
+    "Chris creates or provides the exact Amazon Associates affiliate URL.",
+    "Chris approves live_enabled=true for this product.",
+    "Run reusable approved-link intake before publishing."
+  ],
+  "affiliate_links_created": false,
+  "approved_by_chris": false,
+  "live_enabled": false,
+  "affiliate_link_changes_allowed": false,
+  "product_swap_allowed": false,
+  "git_commit_allowed": false,
+  "git_push_allowed": false,
+  "publish_allowed": false,
+  "next_required_gate": "chris_affiliate_url_for_approved_candidate"
+}
