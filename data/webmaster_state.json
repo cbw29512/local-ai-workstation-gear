@@ -1,0 +1,42 @@
+{
+  "site_name": "Local AI Workstation Gear",
+  "role": "local_ai_webmaster_supervisor",
+  "mode": "24_7_local_supervision",
+  "approval_gates": {
+    "publish_allowed": false,
+    "git_add_allowed": false,
+    "git_commit_allowed": false,
+    "git_push_allowed": false,
+    "affiliate_link_changes_allowed": false,
+    "product_swap_allowed": false,
+    "outreach_allowed": false,
+    "spend_allowed": false,
+    "external_account_action_allowed": false
+  },
+  "local_ai_responsibilities": [
+    "audit public pages",
+    "watch item inventory",
+    "detect stale or weak pages",
+    "prepare optimization reports",
+    "prepare monthly swap proposals",
+    "prepare cloud review packets",
+    "keep funnel and item pages aligned"
+  ],
+  "cloud_ai_responsibilities": [
+    "deep product research",
+    "competitor review",
+    "SEO review",
+    "claim and compliance double-check",
+    "major change review"
+  ],
+  "human_approval_required_for": [
+    "publishing",
+    "git commits",
+    "git pushes",
+    "affiliate links",
+    "product swaps",
+    "outreach",
+    "spending",
+    "external account actions"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "created_at": "2026-05-14T03:24:23.610628+00:00",
+  "status": "pass",
+  "site_name": "Local AI Workstation Gear",
+  "mode": "24_7_local_supervision",
+  "item_count": 24,
+  "target_item_count": 24,
+  "site_page_count": 24,
+  "wrong_brand_hits": [],
+  "missing_disclosure_pages": [],
+  "recommendations": [
+    "No structural issues found. Continue monitoring performance."
+  ],
+  "blockers": [],
+  "approval_gates": {
+    "publish_allowed": false,
+    "git_add_allowed": false,
+    "git_commit_allowed": false,
+    "git_push_allowed": false,
+    "affiliate_link_changes_allowed": false,
+    "product_swap_allowed": false,
+    "outreach_allowed": false,
+    "spend_allowed": false,
+    "external_account_action_allowed": false
+  },
+  "next_required_gate": "public_brand_and_inventory_patch"
+}
