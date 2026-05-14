@@ -1,0 +1,26 @@
+{
+  "created_at": "2026-05-14T19:15:20.550799+00:00",
+  "status": "cloud_vertical_handoff_ready",
+  "vertical_slug": "home-organization",
+  "site_angle": "Simple products that make rooms easier to organize and navigate.",
+  "source_packet": "/Users/chris/Code/local-ai-workstation-gear/data/site_portfolio/cloud_vertical_packets/home-organization.md",
+  "target_result_file": "/Users/chris/Code/local-ai-workstation-gear/data/site_portfolio/cloud_vertical_results/home-organization.json",
+  "required_result_count": 24,
+  "required_result_status": "cloud_vertical_research_completed",
+  "rules": {
+    "amazon_only": true,
+    "asin_required_when_available": true,
+    "no_affiliate_links_created": true,
+    "no_prices": true,
+    "no_ratings": true,
+    "no_fake_reviews": true,
+    "no_fake_discounts": true,
+    "human_approval_required": true
+  },
+  "affiliate_link_changes_allowed": false,
+  "product_swap_allowed": false,
+  "git_commit_allowed": false,
+  "git_push_allowed": false,
+  "publish_allowed": false,
+  "next_required_gate": "paste_cloud_vertical_research_results"
+}
