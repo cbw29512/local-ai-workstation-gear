@@ -47,7 +47,7 @@ def main() -> int:
             problems.append(f"{slug}: first_live_at missing")
 
         source = performance_map.get(slug, {}).get("metric_source", "")
-        if "amazon" not in source:
+        if "amazon" not in source.lower():
             problems.append(f"{slug}: performance metric source not Amazon-aware")
 
     print("RESULT:")

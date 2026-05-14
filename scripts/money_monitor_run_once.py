@@ -19,7 +19,8 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from webmaster.money_status import build_money_status, setup_logging
+from webmaster.money_io import setup_logging
+from webmaster.money_status import build_money_status
 
 
 REPORT_JSON = ROOT / "reports" / "money_monitor" / "money_status.json"
