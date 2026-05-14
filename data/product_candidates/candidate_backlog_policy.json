@@ -1,0 +1,28 @@
+{
+  "status": "candidate_backlog_policy_active",
+  "max_backlog_items": 3,
+  "priority_slugs": [
+    "external-ssd-ai-model-storage",
+    "nvme-ssd-ai-workstation",
+    "ai-laptop-32gb-ram",
+    "mac-mini-local-ai-setup",
+    "budget-ai-workstation-desktop"
+  ],
+  "rules": {
+    "amazon_only": true,
+    "asin_required": true,
+    "skip_live_products": true,
+    "skip_current_pending_gate_slug": true,
+    "cloud_clarification_required": true,
+    "human_approval_required": true,
+    "no_prices": true,
+    "no_ratings": true,
+    "no_fake_claims": true
+  },
+  "affiliate_link_changes_allowed": false,
+  "product_swap_allowed": false,
+  "git_commit_allowed": false,
+  "git_push_allowed": false,
+  "publish_allowed": false,
+  "next_required_gate": "generate_candidate_backlog"
+}
