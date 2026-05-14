@@ -1,0 +1,24 @@
+{
+  "status": "manual_amazon_metrics_snapshot_ready",
+  "source": "Amazon Associates manual report import",
+  "snapshots": [
+    {
+      "captured_at": null,
+      "slot": 1,
+      "slug": "starter-local-ai-mini-pc",
+      "asin": "B0GHNDHGP5",
+      "product_name": "ACEMAGIC M1A PRO+ AI Mini Gaming PC",
+      "clicks_30d": 0,
+      "affiliate_clicks_30d": 0,
+      "impressions_30d": 0,
+      "ctr_30d": 0.0,
+      "notes": "Initial live state. Update from Amazon Associates/Search Console reports."
+    }
+  ],
+  "replacement_allowed": false,
+  "product_swap_allowed": false,
+  "affiliate_link_changes_allowed": false,
+  "git_commit_allowed": false,
+  "git_push_allowed": false,
+  "publish_allowed": false
+}
