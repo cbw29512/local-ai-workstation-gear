@@ -26,7 +26,7 @@ WRONG_BRANDS = [
     "Home Depot",
 ]
 
-REQUIRED_DISCLOSURE = "Affiliate disclosure"
+REQUIRED_DISCLOSURE = "Amazon Associate disclosure"
 
 
 def html_files() -> list[Path]:

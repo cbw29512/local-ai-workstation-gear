@@ -56,7 +56,7 @@ def render_index(inventory: dict[str, Any]) -> str:
 {cards}
   </main>
   <footer id="disclosure">
-    <p><strong>Affiliate disclosure:</strong> Some outbound links may be affiliate links after manual review. We do not invent prices, ratings, or discounts.</p>
+    <p><strong>Amazon Associate disclosure:</strong> As an Amazon Associate I earn from qualifying purchases. Product links are reviewed before going live.</p>
   </footer>
 </body>
 </html>
@@ -99,7 +99,7 @@ def render_item_page(inventory: dict[str, Any], item: dict[str, Any]) -> str:
     </section>
   </main>
   <footer>
-    <p><strong>Affiliate disclosure:</strong> Some outbound links may be affiliate links after manual review. No prices, ratings, or discounts are shown unless verified.</p>
+    <p><strong>Amazon Associate disclosure:</strong> As an Amazon Associate I earn from qualifying purchases. No prices, ratings, or discounts are shown unless verified.</p>
   </footer>
 </body>
 </html>
