@@ -1,0 +1,120 @@
+{
+  "status": "vertical_diversification_policy_active",
+  "current_site": {
+    "repo": "local-ai-workstation-gear",
+    "site_slug": "local-ai-workstation-gear",
+    "vertical": "tech",
+    "rule": "Keep this site focused on local AI workstation gear."
+  },
+  "portfolio_goal": "Create reusable Amazon-only affiliate sites across multiple non-tech verticals.",
+  "target_non_tech_ratio": 0.75,
+  "max_vertical_proposals": 8,
+  "non_tech_verticals": [
+    {
+      "vertical_slug": "home-organization",
+      "site_angle": "Simple products that make rooms easier to organize and navigate.",
+      "example_item_angles": [
+        "entryway drop zone",
+        "closet organization",
+        "cord and cable cleanup",
+        "under-sink storage"
+      ]
+    },
+    {
+      "vertical_slug": "kitchen-gadgets",
+      "site_angle": "Useful kitchen tools that solve small daily annoyances.",
+      "example_item_angles": [
+        "meal prep tools",
+        "countertop space savers",
+        "easy cleanup tools",
+        "storage containers"
+      ]
+    },
+    {
+      "vertical_slug": "pet-care",
+      "site_angle": "Practical pet products for cleaner homes and easier routines.",
+      "example_item_angles": [
+        "dog walking gear",
+        "cat litter cleanup",
+        "pet hair control",
+        "pet travel accessories"
+      ]
+    },
+    {
+      "vertical_slug": "sleep-comfort",
+      "site_angle": "Comfort products that improve bedroom routines without medical claims.",
+      "example_item_angles": [
+        "cooling pillows",
+        "blackout curtains",
+        "white noise machines",
+        "bedside organization"
+      ]
+    },
+    {
+      "vertical_slug": "travel-essentials",
+      "site_angle": "Small travel products that make packing and trips easier.",
+      "example_item_angles": [
+        "packing cubes",
+        "toiletry bags",
+        "carry-on organization",
+        "travel chargers"
+      ]
+    },
+    {
+      "vertical_slug": "car-organization",
+      "site_angle": "Affordable car products that keep vehicles cleaner and more organized.",
+      "example_item_angles": [
+        "trunk organizers",
+        "seat gap storage",
+        "car trash cans",
+        "phone mounts"
+      ]
+    },
+    {
+      "vertical_slug": "outdoor-backyard",
+      "site_angle": "Backyard and patio products for simple home upgrades.",
+      "example_item_angles": [
+        "solar lights",
+        "patio storage",
+        "bug control accessories",
+        "garden tool organization"
+      ]
+    },
+    {
+      "vertical_slug": "creator-lifestyle",
+      "site_angle": "Useful products for people making videos, photos, or home content.",
+      "example_item_angles": [
+        "desk lighting",
+        "phone tripods",
+        "background organization",
+        "small creator accessories"
+      ]
+    }
+  ],
+  "blocked_categories": [
+    "weapons",
+    "nicotine",
+    "alcohol",
+    "adult products",
+    "supplements",
+    "prescription medication",
+    "gambling",
+    "spyware",
+    "counterfeit goods"
+  ],
+  "rules": {
+    "amazon_only": true,
+    "separate_site_per_vertical": true,
+    "cloud_research_required": true,
+    "human_approval_required": true,
+    "no_prices": true,
+    "no_ratings": true,
+    "no_fake_claims": true
+  },
+  "affiliate_link_changes_allowed": false,
+  "product_swap_allowed": false,
+  "git_commit_allowed": false,
+  "git_push_allowed": false,
+  "publish_allowed": false,
+  "next_required_gate": "generate_non_tech_vertical_proposals"
+}

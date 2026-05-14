@@ -11,3 +11,5 @@ cd /Users/chris/Code/local-ai-workstation-gear
 /usr/bin/python3 scripts/candidate_backlog_doctor.py
 /usr/bin/python3 scripts/generate_approved_candidate_queue.py
 /usr/bin/python3 scripts/approved_candidate_queue_doctor.py
+/usr/bin/python3 scripts/generate_non_tech_vertical_proposals.py
+/usr/bin/python3 scripts/non_tech_vertical_proposals_doctor.py
