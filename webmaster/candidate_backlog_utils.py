@@ -53,3 +53,16 @@ def existing_backlog_slugs() -> set[str]:
         for item in backlog.get("items", [])
         if item.get("status") == "queued_for_cloud_clarification"
     }
+
+def existing_backlog_items() -> list[dict[str, Any]]:
+    """Return existing queued backlog items so hourly runs do not erase them."""
+    if not BACKLOG_JSON.is_file():
+        return []
+
+    backlog = load_json(BACKLOG_JSON)
+    return [
+        item
+        for item in backlog.get("items", [])
+        if item.get("status") == "queued_for_cloud_clarification"
+    ]
+

@@ -1,10 +1,10 @@
 {
-  "created_at": "2026-05-14T16:41:49.342771+00:00",
+  "created_at": "2026-05-14T16:43:55.215759+00:00",
   "status": "candidate_backlog_created",
   "item_count": 3,
   "items": [
     {
-      "created_at": "2026-05-14T16:41:49.342352+00:00",
+      "created_at": "2026-05-14T16:43:54.828269+00:00",
       "status": "queued_for_cloud_clarification",
       "slot": 9,
       "slug": "nvme-ssd-ai-workstation",
@@ -63,7 +63,7 @@
       "next_required_gate": "cloud_ai_candidate_clarification"
     },
     {
-      "created_at": "2026-05-14T16:41:49.342365+00:00",
+      "created_at": "2026-05-14T16:43:54.828281+00:00",
       "status": "queued_for_cloud_clarification",
       "slot": 6,
       "slug": "ai-laptop-32gb-ram",
@@ -124,7 +124,7 @@
       "next_required_gate": "cloud_ai_candidate_clarification"
     },
     {
-      "created_at": "2026-05-14T16:41:49.342372+00:00",
+      "created_at": "2026-05-14T16:43:54.828289+00:00",
       "status": "queued_for_cloud_clarification",
       "slot": 4,
       "slug": "mac-mini-local-ai-setup",
