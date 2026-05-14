@@ -1,0 +1,22 @@
+{
+  "status": "rotation_policy_active",
+  "timezone": "UTC",
+  "review_cadence_days": 7,
+  "default_rotation_window_days": 30,
+  "seo_slow_burn_days": 90,
+  "early_broken_link_review_days": 7,
+  "product_availability_review_days": 14,
+  "winner_protection_enabled": true,
+  "protect_if_affiliate_clicks_30d_gte": 1,
+  "protect_if_total_clicks_30d_gte": 3,
+  "improve_if_impressions_30d_gte": 25,
+  "replace_if_impressions_30d_lt": 10,
+  "replace_if_clicks_30d_eq": 0,
+  "replace_if_affiliate_clicks_30d_eq": 0,
+  "product_swap_allowed": false,
+  "affiliate_link_changes_allowed": false,
+  "git_commit_allowed": false,
+  "git_push_allowed": false,
+  "publish_allowed": false,
+  "next_required_gate": "timestamp_lifecycle_items"
+}

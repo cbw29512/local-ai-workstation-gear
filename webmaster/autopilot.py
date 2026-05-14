@@ -11,6 +11,7 @@ from datetime import datetime, timezone
 from typing import Any
 
 from webmaster.product_pipeline import build_product_pipeline_status
+from webmaster.lifecycle_status import build_lifecycle_status
 
 
 def decide_next_action(status: dict[str, Any]) -> str:
@@ -33,6 +34,7 @@ def decide_next_action(status: dict[str, Any]) -> str:
 def build_autopilot_report() -> dict[str, Any]:
     """Build the local AI autopilot report."""
     status = build_product_pipeline_status()
+    lifecycle = build_lifecycle_status()
     next_action = decide_next_action(status)
 
     return {
@@ -41,6 +43,7 @@ def build_autopilot_report() -> dict[str, Any]:
         "site": "Local AI Workstation Gear",
         "local_ai_role": "webmaster_supervisor",
         "product_pipeline": status,
+        "lifecycle": lifecycle,
         "recommended_next_action": next_action,
         "cloud_ai_needed": next_action in {
             "send_batch_01_to_cloud_ai",
@@ -59,6 +62,7 @@ def build_autopilot_report() -> dict[str, Any]:
 def render_autopilot_markdown(report: dict[str, Any]) -> str:
     """Render autopilot report as Markdown."""
     pipeline = report["product_pipeline"]
+    lifecycle = report.get("lifecycle", {})
 
     return f"""# Local AI Autopilot Next Action
 
@@ -75,6 +79,13 @@ Role: `{report["local_ai_role"]}`
 - Batch 01 results exist: `{pipeline["batch_01_results_exists"]}`
 - Batch 01 reviewed slots: `{pipeline["batch_01_reviewed_slots"]}`
 - Batch 01 ready for Chris review: `{pipeline["batch_01_ready_for_chris_review"]}`
+
+## Lifecycle Timing
+
+- Lifecycle item count: `{lifecycle.get("lifecycle_item_count", 0)}`
+- Due for review: `{lifecycle.get("due_for_review_count", 0)}`
+- Due for rotation: `{lifecycle.get("due_for_rotation_count", 0)}`
+- Protected winners: `{lifecycle.get("protected_winner_count", 0)}`
 
 ## Recommended Next Action
 
