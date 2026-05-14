@@ -1,8 +1,9 @@
 """
-Inject approved Amazon product cards.
+Generate approved Amazon redirect pages.
 
 Safety:
-- Renders only Chris-approved live links.
+- Uses only approved_by_chris + live_enabled links.
+- No fake links.
 - No commits or pushes.
 """
 
@@ -16,20 +17,20 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from webmaster.amazon_product_cards import inject_cards
+from webmaster.amazon_redirects import generate_redirects
 
 
 def main() -> int:
-    """Inject approved product cards."""
+    """Generate redirect pages."""
     try:
-        count = inject_cards()
+        count = generate_redirects()
     except Exception as exc:
         print("RESULT: ERROR")
         print(exc)
         return 1
 
     print("RESULT: PASS")
-    print(f"approved_live_links_rendered: {count}")
+    print(f"redirect_pages_created: {count}")
     return 0
 
 

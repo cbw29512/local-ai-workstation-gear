@@ -1,66 +1,34 @@
 """
 Validate Amazon affiliate link registry.
 
-State schema:
-{
-  "status": str,
-  "links": list,
-  "approved_by_chris": bool,
-  "live_enabled": bool
-}
-
-Safety:
-- Read-only.
-- No page edits.
-- No commits or pushes.
+Read-only doctor.
+No page edits, commits, pushes, or publishing.
 """
 
 from __future__ import annotations
 
-import json
+import sys
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-REGISTRY = ROOT / "data/amazon_links/approved_amazon_links.json"
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
-
-def is_amazon_url(value: str) -> bool:
-    """Allow Amazon product URLs or Amazon short links."""
-    return "amazon.com" in value or "amzn.to" in value
+from webmaster.amazon_links_io import load_json
+from webmaster.amazon_links_paths import LINK_REGISTRY
+from webmaster.amazon_links_validate import approved_live_links, validate_registry
 
 
 def main() -> int:
-    """Validate registry safety rules."""
+    """Validate registry safety."""
     problems: list[str] = []
 
-    if not REGISTRY.is_file():
-        problems.append(f"missing registry: {REGISTRY}")
+    if not LINK_REGISTRY.is_file():
+        problems.append(f"missing registry: {LINK_REGISTRY}")
     else:
-        data = json.loads(REGISTRY.read_text(encoding="utf-8"))
-        links = data.get("links", [])
-
-        if not links:
-            problems.append("links list is empty")
-
-        for link in links:
-            slug = link.get("slug", "unknown")
-            raw_url = link.get("amazon_url", "")
-            affiliate_url = link.get("approved_affiliate_url", "")
-
-            if not is_amazon_url(raw_url):
-                problems.append(f"{slug}: amazon_url is not Amazon/amzn.to")
-
-            if link.get("live_enabled") is True:
-                if link.get("approved_by_chris") is not True:
-                    problems.append(f"{slug}: live link must be approved by Chris")
-
-                if "PASTE_" in affiliate_url or not is_amazon_url(affiliate_url):
-                    problems.append(f"{slug}: live affiliate URL invalid")
-
-        for key in ["affiliate_link_changes_allowed", "git_commit_allowed", "git_push_allowed"]:
-            if data.get(key) is not False:
-                problems.append(f"{key} must remain false")
+        data = load_json(LINK_REGISTRY)
+        problems.extend(validate_registry(data))
 
     print("RESULT:")
 
@@ -70,8 +38,11 @@ def main() -> int:
             print(f"- {problem}")
         return 1
 
+    data = load_json(LINK_REGISTRY)
     print("AMAZON LINK REGISTRY STATE: PASS")
-    print("Registry exists. Live links render only when approved_by_chris and live_enabled are true.")
+    print(f"registry_links: {len(data.get('links', []))}")
+    print(f"approved_live_links: {len(approved_live_links(data))}")
+    print("next_required_gate: paste_chris_approved_amazon_affiliate_links")
     return 0
 
 
