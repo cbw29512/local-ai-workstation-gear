@@ -13,5 +13,11 @@
   "global_risk_notes": [],
   "ready_for_chris_review": false,
   "affiliate_links_created": false,
-  "publish_recommended": false
+  "publish_recommended": false,
+  "affiliate_link_changes_allowed": false,
+  "product_swap_allowed": false,
+  "git_commit_allowed": false,
+  "git_push_allowed": false,
+  "publish_allowed": false,
+  "next_required_gate": "paste_cloud_vertical_research_results"
 }
