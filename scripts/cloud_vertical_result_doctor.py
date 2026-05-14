@@ -1,8 +1,9 @@
 """
-Validate cloud vertical research result.
+Validate active cloud vertical research result.
 
 State:
-- Cloud AI may return product research.
+- Reads the active cloud vertical handoff.
+- Validates the handoff target result file.
 - Cloud AI must not create affiliate links.
 - Chris must approve before site creation or publishing.
 
@@ -17,13 +18,13 @@ from __future__ import annotations
 
 import json
 import logging
-import sys
 from pathlib import Path
 from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
-RESULT_FILE = ROOT / "data/site_portfolio/cloud_vertical_results/home-organization.json"
+HANDOFF = ROOT / "data/site_portfolio/cloud_vertical_handoff.json"
+FALLBACK_RESULT = ROOT / "data/site_portfolio/cloud_vertical_results/home-organization.json"
 LOG_FILE = ROOT / "logs/cloud_vertical_result_doctor.log"
 
 
@@ -44,6 +45,18 @@ def load_json(path: Path) -> dict[str, Any]:
     except Exception as exc:
         logging.exception("Failed to load %s: %s", path, exc)
         raise
+
+
+def active_target() -> tuple[str, Path]:
+    """Return active vertical slug and target result path."""
+    if not HANDOFF.is_file():
+        return "home-organization", FALLBACK_RESULT
+
+    handoff = load_json(HANDOFF)
+    slug = str(handoff.get("vertical_slug", "home-organization"))
+    target = Path(str(handoff.get("target_result_file", FALLBACK_RESULT)))
+
+    return slug, target
 
 
 def is_amazon_url(value: str) -> bool:
@@ -71,7 +84,7 @@ def validate_item(item: dict[str, Any]) -> list[str]:
     return problems
 
 
-def validate_result(data: dict[str, Any]) -> list[str]:
+def validate_result(data: dict[str, Any], expected_slug: str) -> list[str]:
     """Validate full result file."""
     problems: list[str] = []
     items = data.get("items", [])
@@ -82,8 +95,8 @@ def validate_result(data: dict[str, Any]) -> list[str]:
     if data.get("status") != "cloud_vertical_research_completed":
         problems.append(f"bad status: {data.get('status')}")
 
-    if data.get("vertical_slug") != "home-organization":
-        problems.append("vertical_slug must be home-organization")
+    if data.get("vertical_slug") != expected_slug:
+        problems.append(f"vertical_slug must be {expected_slug}")
 
     if len(items) != 24:
         problems.append(f"expected 24 items, got {len(items)}")
@@ -111,7 +124,8 @@ def main() -> int:
     setup_logging()
 
     try:
-        data = load_json(RESULT_FILE)
+        expected_slug, result_file = active_target()
+        data = load_json(result_file)
     except Exception as exc:
         print("RESULT:")
         print("CLOUD VERTICAL RESULT STATE: NEEDS REVIEW")
@@ -121,10 +135,12 @@ def main() -> int:
     if data.get("status") == "awaiting_cloud_vertical_research":
         print("RESULT:")
         print("CLOUD VERTICAL RESULT STATE: WAITING")
+        print(f"vertical_slug: {expected_slug}")
+        print(f"target_result_file: {result_file}")
         print("Paste cloud research results before validation.")
         return 0
 
-    problems = validate_result(data)
+    problems = validate_result(data, expected_slug)
 
     print("RESULT:")
 
@@ -135,7 +151,7 @@ def main() -> int:
         return 1
 
     print("CLOUD VERTICAL RESULT STATE: PASS")
-    print("vertical_slug: home-organization")
+    print(f"vertical_slug: {expected_slug}")
     print("item_count: 24")
     print("next_required_gate: chris_vertical_site_approval")
     return 0
