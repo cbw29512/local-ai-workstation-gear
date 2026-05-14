@@ -42,6 +42,7 @@ def render_redirect(link: dict[str, Any]) -> str:
 </head>
 <body>
   <p>Redirecting to Amazon for {name}.</p>
+  <p><strong>Amazon Associate disclosure:</strong> As an Amazon Associate I earn from qualifying purchases.</p>
   <p><a href="{url}" rel="sponsored nofollow noopener">Continue to Amazon</a></p>
 </body>
 </html>
