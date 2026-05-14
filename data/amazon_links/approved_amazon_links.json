@@ -1,0 +1,52 @@
+{
+  "status": "awaiting_chris_approved_amazon_affiliate_links",
+  "site": "Local AI Workstation Gear",
+  "required_disclosure": "As an Amazon Associate I earn from qualifying purchases.",
+  "rules": {
+    "amazon_only": true,
+    "approved_by_chris_required": true,
+    "no_fake_prices": true,
+    "no_fake_ratings": true,
+    "no_fake_reviews": true,
+    "no_fake_discounts": true
+  },
+  "links": [
+    {
+      "slot": 3,
+      "slug": "mac-mini-local-ai-setup",
+      "product_name": "Apple 2024 Mac mini Desktop Computer with M4 chip",
+      "asin": "B0DLBX4B1K",
+      "amazon_url": "https://www.amazon.com/Apple-2024-Desktop-Computer-10%E2%80%91core/dp/B0DLBX4B1K",
+      "approved_affiliate_url": "PASTE_CHRIS_APPROVED_AMAZON_AFFILIATE_URL_HERE",
+      "approved_by_chris": false,
+      "live_enabled": false,
+      "button_text": "Check on Amazon"
+    },
+    {
+      "slot": 5,
+      "slug": "external-ssd-ai-model-storage",
+      "product_name": "Crucial X9 2TB Portable SSD",
+      "asin": "B0CGW18S6Y",
+      "amazon_url": "https://www.amazon.com/Crucial-2TB-Portable-SSD-CT2000X9SSD902/dp/B0CGW18S6Y",
+      "approved_affiliate_url": "PASTE_CHRIS_APPROVED_AMAZON_AFFILIATE_URL_HERE",
+      "approved_by_chris": false,
+      "live_enabled": false,
+      "button_text": "Check on Amazon"
+    },
+    {
+      "slot": 5,
+      "slug": "external-ssd-ai-model-storage",
+      "product_name": "Samsung T9 Portable SSD 2TB",
+      "asin": "B0CHFS9K14",
+      "amazon_url": "https://www.amazon.com/SAMSUNG-Portable-Professionals-MU-PG2T0B-AM/dp/B0CHFS9K14",
+      "approved_affiliate_url": "PASTE_CHRIS_APPROVED_AMAZON_AFFILIATE_URL_HERE",
+      "approved_by_chris": false,
+      "live_enabled": false,
+      "button_text": "Check on Amazon"
+    }
+  ],
+  "affiliate_link_changes_allowed": false,
+  "git_commit_allowed": false,
+  "git_push_allowed": false,
+  "next_required_gate": "paste_chris_approved_amazon_affiliate_links"
+}
