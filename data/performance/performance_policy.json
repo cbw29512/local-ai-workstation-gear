@@ -1,0 +1,17 @@
+{
+  "status": "performance_policy_active",
+  "metrics_source": "manual_or_future_analytics_import",
+  "snapshot_cadence": "daily",
+  "protect_if_affiliate_clicks_30d_gte": 1,
+  "protect_if_clicks_30d_gte": 3,
+  "improve_if_impressions_30d_gte": 25,
+  "replace_if_impressions_30d_lt": 10,
+  "replace_if_clicks_30d_eq": 0,
+  "replace_if_affiliate_clicks_30d_eq": 0,
+  "replacement_allowed": false,
+  "product_swap_allowed": false,
+  "affiliate_link_changes_allowed": false,
+  "git_commit_allowed": false,
+  "git_push_allowed": false,
+  "publish_allowed": false
+}
