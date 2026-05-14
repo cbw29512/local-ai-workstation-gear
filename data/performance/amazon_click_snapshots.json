@@ -3,7 +3,7 @@
   "source": "Amazon Associates manual report import",
   "snapshots": [
     {
-      "captured_at": null,
+      "captured_at": "2026-05-14T16:06:45.530861+00:00",
       "slot": 1,
       "slug": "starter-local-ai-mini-pc",
       "asin": "B0GHNDHGP5",
@@ -20,5 +20,6 @@
   "affiliate_link_changes_allowed": false,
   "git_commit_allowed": false,
   "git_push_allowed": false,
-  "publish_allowed": false
+  "publish_allowed": false,
+  "updated_at": "2026-05-14T16:06:45.530861+00:00"
 }
