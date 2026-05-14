@@ -1,0 +1,108 @@
+{
+  "status": "backlog_cloud_clarified",
+  "created_by": "large_ai_clarification",
+  "items": [
+    {
+      "slot": 9,
+      "slug": "nvme-ssd-ai-workstation",
+      "title": "NVMe SSD for AI Workstations",
+      "final_decision": "approve",
+      "best_candidate_product_name": "WD_BLACK SN850X 2TB NVMe SSD",
+      "best_candidate_brand": "Western Digital / SanDisk",
+      "best_candidate_asin": "B0B7CMZ3QH",
+      "best_candidate_amazon_url": "https://www.amazon.com/WD_BLACK-SN850X-Internal-Gaming-Solid/dp/B0B7CMZ3QH",
+      "reasons": [
+        "Strong fit for internal AI workstation storage.",
+        "M.2 NVMe PCIe Gen4 positioning matches the page angle.",
+        "2TB capacity is useful for models, datasets, project files, and local build assets."
+      ],
+      "risk_notes": [
+        "Must warn users to confirm motherboard M.2 2280 support.",
+        "Must distinguish heatsink and non-heatsink versions.",
+        "Do not claim exact real-world speeds without testing.",
+        "Do not show price, rating, review count, or discount unless verified at publish time."
+      ],
+      "page_angle": "Fast internal NVMe storage for local AI workstations, model files, datasets, and project builds.",
+      "chris_approval_checklist": [
+        "Chris confirms this is the Slot 9 product.",
+        "Chris provides exact Amazon Associates affiliate URL.",
+        "Run reusable approved-link intake.",
+        "Render, sync docs, run doctors, then push."
+      ],
+      "affiliate_links_created": false,
+      "approved_by_chris": false,
+      "live_enabled": false,
+      "next_required_gate": "chris_affiliate_url_for_approved_candidate"
+    },
+    {
+      "slot": 6,
+      "slug": "ai-laptop-32gb-ram",
+      "title": "AI Laptop With 32GB RAM",
+      "final_decision": "hold",
+      "best_candidate_product_name": "Lenovo LOQ 15 RTX 4060 32GB RAM Laptop",
+      "best_candidate_brand": "Lenovo",
+      "best_candidate_asin": "B0FL85ZPTW",
+      "best_candidate_amazon_url": "https://www.amazon.com/Lenovo-15AHP9-Gaming-Backlit-Keyboard/dp/B0FL85ZPTW",
+      "reasons": [
+        "The category fit is good for portable local AI testing.",
+        "The candidate needs stronger verification before approval because laptop configurations can vary by seller/listing.",
+        "Thermals, GPU VRAM, exact CPU, and seller configuration need review before this becomes a live money page."
+      ],
+      "risk_notes": [
+        "Hold until exact GPU VRAM and laptop configuration are verified.",
+        "Confirm seller and return policy before approval.",
+        "Avoid implying it can run large local models beyond its VRAM limits.",
+        "Do not show price, rating, review count, or discount unless verified at publish time."
+      ],
+      "page_angle": "Portable local AI coding and testing laptop, but only after exact configuration and limitations are verified.",
+      "chris_approval_checklist": [
+        "Do not enable yet.",
+        "Find one or two stronger Amazon laptop alternatives.",
+        "Prefer clear NVIDIA GPU VRAM details and 32GB RAM.",
+        "Send replacement/confirmation to cloud AI before Chris approval."
+      ],
+      "affiliate_links_created": false,
+      "approved_by_chris": false,
+      "live_enabled": false,
+      "next_required_gate": "find_stronger_laptop_candidate"
+    },
+    {
+      "slot": 4,
+      "slug": "mac-mini-local-ai-setup",
+      "title": "Mac Mini Local AI Setup",
+      "final_decision": "approve",
+      "best_candidate_product_name": "Apple 2024 Mac mini Desktop Computer with M4 chip",
+      "best_candidate_brand": "Apple",
+      "best_candidate_asin": "B0DLBX4B1K",
+      "best_candidate_amazon_url": "https://www.amazon.com/Apple-2024-Desktop-Computer-10%E2%80%91core/dp/B0DLBX4B1K",
+      "reasons": [
+        "Strong fit for quiet local AI experiments with Apple Silicon.",
+        "Good page angle for beginner Mac users who want unified memory and low-noise desktop setup.",
+        "Works well as a normal-use coding and local model experimentation machine when limitations are clearly explained."
+      ],
+      "risk_notes": [
+        "Memory and storage are not user-upgradeable after purchase.",
+        "Not CUDA-based, so avoid positioning it as an NVIDIA workstation replacement.",
+        "Confirm exact memory/storage configuration before approval.",
+        "Do not show price, rating, review count, or discount unless verified at publish time."
+      ],
+      "page_angle": "Quiet Apple Silicon local AI setup for coding, small/medium local models, and beginner-friendly experimentation.",
+      "chris_approval_checklist": [
+        "Chris confirms this is the Slot 4 product.",
+        "Chris provides exact Amazon Associates affiliate URL.",
+        "Run reusable approved-link intake.",
+        "Render, sync docs, run doctors, then push."
+      ],
+      "affiliate_links_created": false,
+      "approved_by_chris": false,
+      "live_enabled": false,
+      "next_required_gate": "chris_affiliate_url_for_approved_candidate"
+    }
+  ],
+  "affiliate_link_changes_allowed": false,
+  "product_swap_allowed": false,
+  "git_commit_allowed": false,
+  "git_push_allowed": false,
+  "publish_allowed": false,
+  "next_required_gate": "chris_affiliate_url_for_approved_backlog_candidates"
+}
