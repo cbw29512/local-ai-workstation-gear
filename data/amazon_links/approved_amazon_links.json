@@ -1,5 +1,5 @@
 {
-  "status": "awaiting_chris_approved_amazon_affiliate_links",
+  "status": "has_chris_approved_live_amazon_links",
   "site": "Local AI Workstation Gear",
   "required_disclosure": "As an Amazon Associate I earn from qualifying purchases.",
   "rules": {
@@ -14,16 +14,17 @@
     {
       "slot": 1,
       "slug": "starter-local-ai-mini-pc",
-      "product_name": "Beelink SER9 Pro AI Mini PC",
-      "brand": "Beelink",
-      "asin": "B0DHMWSK91",
-      "amazon_url": "https://www.amazon.com/Beelink-LPDDR5X-8000MHz-PCIe4-0-Speakers/dp/B0DHMWSK91",
-      "approved_affiliate_url": "PASTE_CHRIS_APPROVED_AMAZON_AFFILIATE_URL_HERE",
-      "approved_by_chris": false,
-      "live_enabled": false,
+      "product_name": "ACEMAGIC M1A PRO+ AI Mini Gaming PC",
+      "brand": "ACEMAGIC",
+      "asin": "B0GHNDHGP5",
+      "amazon_url": "https://www.amazon.com/dp/B0GHNDHGP5",
+      "approved_affiliate_url": "https://www.amazon.com/dp/B0GHNDHGP5?&linkCode=ll2&tag=maxyourheal06-20&linkId=b4acf159efe386fdf19ed4be0db83bf7&language=en_US&ref_=as_li_ss_tl",
+      "approved_by_chris": true,
+      "live_enabled": true,
       "button_text": "Check on Amazon",
-      "first_added_to_registry_at": null,
-      "last_affiliate_review_at": null
+      "first_added_to_registry_at": "2026-05-14T15:44:52.778790+00:00",
+      "last_affiliate_review_at": "2026-05-14T15:44:52.778790+00:00",
+      "notes": "Chris directly provided this Amazon Associates URL."
     },
     {
       "slot": 2,
@@ -115,5 +116,14 @@
   "git_commit_allowed": false,
   "git_push_allowed": false,
   "publish_allowed": false,
-  "next_required_gate": "paste_chris_approved_amazon_affiliate_links"
+  "next_required_gate": "render_approved_amazon_links",
+  "pending_short_links": [
+    {
+      "url": "https://amzn.to/42Dz8f1",
+      "status": "pending_manual_product_mapping",
+      "added_at": "2026-05-14T15:44:52.778790+00:00",
+      "reason": "Short link provided by Chris; product identity not mapped yet."
+    }
+  ],
+  "last_updated_at": "2026-05-14T15:44:52.778790+00:00"
 }
