@@ -31,7 +31,17 @@ def render_card(link: dict[str, Any]) -> str:
       <h2>Approved Amazon Pick</h2>
       <h3>{esc(link["product_name"])}</h3>
       <p>Reviewed for this local AI workstation gear category.</p>
-      <a class="button" href="{redirect_href(link)}" rel="sponsored nofollow">Check on Amazon</a>
+      <a
+        class="button"
+        href="{redirect_href(link)}"
+        rel="sponsored nofollow"
+        data-affiliate-click="amazon"
+        data-merchant="amazon"
+        data-slot="{esc(link.get("slot", ""))}"
+        data-slug="{esc(link.get("slug", ""))}"
+        data-asin="{esc(link.get("asin", ""))}"
+        data-product-name="{esc(link.get("product_name", ""))}"
+      >Check on Amazon</a>
       <p><small>As an Amazon Associate I earn from qualifying purchases.</small></p>
     </section>
 """
@@ -47,6 +57,16 @@ def strip_old_cards(text: str) -> str:
     return text
 
 
+def ensure_click_script(text: str) -> str:
+    """Ensure affiliate click script is loaded once."""
+    script = '<script src="../../assets/affiliate_clicks.js" defer></script>'
+
+    if script in text:
+        return text
+
+    return text.replace("</body>", f"  {script}\n</body>")
+
+
 def inject_cards() -> int:
     """Inject approved cards into matching site pages."""
     data = load_json(LINK_REGISTRY)
@@ -60,6 +80,7 @@ def inject_cards() -> int:
         page = SITES_DIR / slug / "index.html"
         text = strip_old_cards(page.read_text(encoding="utf-8"))
         updated = text.replace("</main>", "\n".join(cards) + "\n  </main>")
+        updated = ensure_click_script(updated)
         page.write_text(updated, encoding="utf-8")
 
     return len(links)

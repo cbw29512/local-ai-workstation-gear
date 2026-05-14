@@ -34,6 +34,13 @@ def main() -> int:
             shutil.rmtree(target_sites)
 
         shutil.copytree(ROOT / "sites", target_sites)
+        target_assets = DOCS / "assets"
+        if target_assets.exists():
+            shutil.rmtree(target_assets)
+
+        if (ROOT / "assets").exists():
+            shutil.copytree(ROOT / "assets", target_assets)
+
         (DOCS / ".nojekyll").touch()
     except Exception as exc:
         print("RESULT: ERROR")
