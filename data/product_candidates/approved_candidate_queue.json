@@ -1,0 +1,126 @@
+{
+  "created_at": "2026-05-14T16:48:27.670260+00:00",
+  "status": "approved_candidate_queue_ready",
+  "approved_count": 3,
+  "held_count": 1,
+  "approved_items": [
+    {
+      "source": "primary_cloud_clarification",
+      "slot": 8,
+      "slug": "external-ssd-ai-model-storage",
+      "title": null,
+      "product_name": "Crucial X9 2TB Portable SSD",
+      "brand": "Crucial",
+      "asin": "B0CGW18S6Y",
+      "amazon_url": "https://www.amazon.com/Crucial-2TB-Portable-SSD-CT2000X9SSD902/dp/B0CGW18S6Y",
+      "page_angle": "Beginner-friendly portable storage for local AI models, datasets, project files, and backups.",
+      "risk_notes": [
+        "Do not claim exact real-world speed without testing.",
+        "Do not publish price, rating, review count, or discount unless verified at publish time.",
+        "External SSD speed depends on the user's USB port and cable.",
+        "Not a replacement for internal NVMe storage for every workload."
+      ],
+      "chris_approval_checklist": [
+        "Chris confirms this is the product to use for Slot 8.",
+        "Chris creates or provides the exact Amazon Associates affiliate URL.",
+        "Chris approves live_enabled=true for this product.",
+        "Run reusable approved-link intake before publishing."
+      ],
+      "approved_affiliate_url": "",
+      "approved_by_chris": false,
+      "live_enabled": false,
+      "next_required_gate": "chris_affiliate_url_for_approved_candidate",
+      "affiliate_link_changes_allowed": false,
+      "product_swap_allowed": false,
+      "git_commit_allowed": false,
+      "git_push_allowed": false,
+      "publish_allowed": false
+    },
+    {
+      "source": "backlog_cloud_clarification",
+      "slot": 9,
+      "slug": "nvme-ssd-ai-workstation",
+      "title": "NVMe SSD for AI Workstations",
+      "product_name": "WD_BLACK SN850X 2TB NVMe SSD",
+      "brand": "Western Digital / SanDisk",
+      "asin": "B0B7CMZ3QH",
+      "amazon_url": "https://www.amazon.com/WD_BLACK-SN850X-Internal-Gaming-Solid/dp/B0B7CMZ3QH",
+      "page_angle": "Fast internal NVMe storage for local AI workstations, model files, datasets, and project builds.",
+      "risk_notes": [
+        "Must warn users to confirm motherboard M.2 2280 support.",
+        "Must distinguish heatsink and non-heatsink versions.",
+        "Do not claim exact real-world speeds without testing.",
+        "Do not show price, rating, review count, or discount unless verified at publish time."
+      ],
+      "chris_approval_checklist": [
+        "Chris confirms this is the Slot 9 product.",
+        "Chris provides exact Amazon Associates affiliate URL.",
+        "Run reusable approved-link intake.",
+        "Render, sync docs, run doctors, then push."
+      ],
+      "approved_affiliate_url": "",
+      "approved_by_chris": false,
+      "live_enabled": false,
+      "next_required_gate": "chris_affiliate_url_for_approved_candidate",
+      "affiliate_link_changes_allowed": false,
+      "product_swap_allowed": false,
+      "git_commit_allowed": false,
+      "git_push_allowed": false,
+      "publish_allowed": false
+    },
+    {
+      "source": "backlog_cloud_clarification",
+      "slot": 4,
+      "slug": "mac-mini-local-ai-setup",
+      "title": "Mac Mini Local AI Setup",
+      "product_name": "Apple 2024 Mac mini Desktop Computer with M4 chip",
+      "brand": "Apple",
+      "asin": "B0DLBX4B1K",
+      "amazon_url": "https://www.amazon.com/Apple-2024-Desktop-Computer-10%E2%80%91core/dp/B0DLBX4B1K",
+      "page_angle": "Quiet Apple Silicon local AI setup for coding, small/medium local models, and beginner-friendly experimentation.",
+      "risk_notes": [
+        "Memory and storage are not user-upgradeable after purchase.",
+        "Not CUDA-based, so avoid positioning it as an NVIDIA workstation replacement.",
+        "Confirm exact memory/storage configuration before approval.",
+        "Do not show price, rating, review count, or discount unless verified at publish time."
+      ],
+      "chris_approval_checklist": [
+        "Chris confirms this is the Slot 4 product.",
+        "Chris provides exact Amazon Associates affiliate URL.",
+        "Run reusable approved-link intake.",
+        "Render, sync docs, run doctors, then push."
+      ],
+      "approved_affiliate_url": "",
+      "approved_by_chris": false,
+      "live_enabled": false,
+      "next_required_gate": "chris_affiliate_url_for_approved_candidate",
+      "affiliate_link_changes_allowed": false,
+      "product_swap_allowed": false,
+      "git_commit_allowed": false,
+      "git_push_allowed": false,
+      "publish_allowed": false
+    }
+  ],
+  "held_items": [
+    {
+      "slot": 6,
+      "slug": "ai-laptop-32gb-ram",
+      "title": "AI Laptop With 32GB RAM",
+      "product_name": "Lenovo LOQ 15 RTX 4060 32GB RAM Laptop",
+      "asin": "B0FL85ZPTW",
+      "final_decision": "hold",
+      "next_required_gate": "find_stronger_laptop_candidate",
+      "reason": [
+        "The category fit is good for portable local AI testing.",
+        "The candidate needs stronger verification before approval because laptop configurations can vary by seller/listing.",
+        "Thermals, GPU VRAM, exact CPU, and seller configuration need review before this becomes a live money page."
+      ]
+    }
+  ],
+  "next_required_gate": "chris_affiliate_url_for_approved_candidates",
+  "affiliate_link_changes_allowed": false,
+  "product_swap_allowed": false,
+  "git_commit_allowed": false,
+  "git_push_allowed": false,
+  "publish_allowed": false
+}
