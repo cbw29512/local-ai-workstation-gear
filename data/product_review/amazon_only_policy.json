@@ -1,0 +1,15 @@
+{
+  "status": "amazon_only_policy_active",
+  "monetization_program": "Amazon Associates",
+  "live_item_source_rule": "All live monetized products must come from Amazon.",
+  "approved_candidate_rule": "Approved candidates must include an Amazon product URL or ASIN.",
+  "non_amazon_links_allowed": "research_only_not_live_eligible",
+  "required_disclosure": "As an Amazon Associate I earn from qualifying purchases.",
+  "affiliate_links_created_by_ai": false,
+  "affiliate_link_changes_allowed": false,
+  "product_swap_allowed": false,
+  "git_commit_allowed": false,
+  "git_push_allowed": false,
+  "publish_allowed": false,
+  "next_required_gate": "amazon_only_product_research"
+}

@@ -1,0 +1,248 @@
+{
+  "batch": 1,
+  "status": "cloud_product_research_completed",
+  "site": "Local AI Workstation Gear",
+  "created_by": "cloud_ai_research",
+  "research_only": true,
+  "affiliate_links_created": false,
+  "publish_recommended": false,
+  "ready_for_chris_review": true,
+  "slots": [
+    {
+      "slot": 1,
+      "slug": "starter-local-ai-mini-pc",
+      "recommended_candidates": [
+        {
+          "product_name": "Minisforum UM790 Pro Mini PC",
+          "brand": "Minisforum",
+          "source_url": "https://store.minisforum.com/products/minisforum-um790-pro-mini-pc",
+          "why_it_fits": "Small desktop format with strong mobile Ryzen performance; good starter candidate for local AI experiments that do not require a large dedicated GPU.",
+          "important_specs": [
+            "Mini PC form factor",
+            "Ryzen 9 class mobile processor listing",
+            "Available in RAM/SSD configurations from merchant listings"
+          ],
+          "risk_notes": [
+            "Not a dedicated NVIDIA GPU workstation.",
+            "Good for beginner/local CPU or integrated GPU workflows, not high-end CUDA workloads.",
+            "Confirm exact RAM and SSD configuration before approval."
+          ],
+          "confidence": "medium"
+        },
+        {
+          "product_name": "Beelink SER9 Pro Ryzen AI Mini PC",
+          "brand": "Beelink",
+          "source_url": "https://www.bee-link.com/products/beelink-ser9-ai-9-hx-370",
+          "why_it_fits": "Modern mini PC candidate with Ryzen AI branding and compact footprint for local AI experimentation.",
+          "important_specs": [
+            "Mini PC form factor",
+            "Ryzen AI 9 HX 370 listing",
+            "Compact local workstation candidate"
+          ],
+          "risk_notes": [
+            "Higher cost than basic mini PCs.",
+            "Not a dedicated NVIDIA GPU machine.",
+            "Verify current configuration and availability before approval."
+          ],
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "slug": "budget-ai-workstation-desktop",
+      "recommended_candidates": [
+        {
+          "product_name": "GEEKOM A6 Mini PC",
+          "brand": "GEEKOM",
+          "source_url": "https://www.geekompc.com/geekom-a6-mini-pc/",
+          "why_it_fits": "Could work as a lower-cost starter desktop-style local AI machine for beginners who are not ready for a GPU tower.",
+          "important_specs": [
+            "Mini desktop form factor",
+            "DDR5 memory support listed",
+            "M.2 SSD support listed"
+          ],
+          "risk_notes": [
+            "This is a mini PC, not a true tower workstation.",
+            "May be underpowered for larger local models.",
+            "Better page positioning may be budget mini desktop, not budget AI workstation."
+          ],
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "slot": 3,
+      "slug": "mac-mini-local-ai-setup",
+      "recommended_candidates": [
+        {
+          "product_name": "Apple Mac mini M4",
+          "brand": "Apple",
+          "source_url": "https://www.apple.com/shop/buy-mac/mac-mini",
+          "why_it_fits": "Quiet compact Mac option for beginners who want Apple Silicon and local AI tooling without a large desktop.",
+          "important_specs": [
+            "Apple M4 family",
+            "Unified memory options",
+            "Compact Mac mini form factor"
+          ],
+          "risk_notes": [
+            "Memory is not user-upgradeable after purchase.",
+            "Not CUDA-based.",
+            "Recommend reviewing memory tier carefully before approval."
+          ],
+          "confidence": "high"
+        },
+        {
+          "product_name": "Apple Mac mini M4 Pro",
+          "brand": "Apple",
+          "source_url": "https://www.apple.com/shop/buy-mac/mac-mini/m4-pro-chip-12-core-cpu-16-core-gpu-24gb-memory-512gb-storage",
+          "why_it_fits": "Better candidate for users who want more headroom than the base Mac mini while staying compact and quiet.",
+          "important_specs": [
+            "M4 Pro configuration listed",
+            "24GB unified memory listing",
+            "512GB storage listing"
+          ],
+          "risk_notes": [
+            "Higher cost than base Mac mini.",
+            "Not upgradeable after purchase.",
+            "Still not a CUDA workstation."
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slot": 4,
+      "slug": "ai-laptop-32gb-ram",
+      "recommended_candidates": [
+        {
+          "product_name": "Lenovo LOQ 15.6-inch 32GB Gaming Laptop",
+          "brand": "Lenovo",
+          "source_url": "https://www.bestbuy.com/product/lenovo-loq-15-6-fhd-gaming-laptopamd-ryzen-5-7235hs32gb-ddr51tb-ssd-1tb-dock-setgeforce-rtx-4050win-11-homegrey-gray/JJGXYGGHX7/sku/11006466",
+          "why_it_fits": "Portable 32GB RAM laptop candidate with NVIDIA RTX graphics for beginner local AI and coding experiments.",
+          "important_specs": [
+            "32GB RAM listing",
+            "RTX 4050 listing",
+            "Laptop form factor"
+          ],
+          "risk_notes": [
+            "RTX 4050 VRAM may be limiting for larger models.",
+            "Marketplace bundle/configuration must be checked carefully.",
+            "Not necessarily best value without current price review."
+          ],
+          "confidence": "medium"
+        },
+        {
+          "product_name": "MSI Creator M14 32GB RTX Laptop",
+          "brand": "MSI",
+          "source_url": "https://www.nfm.com/msi-14-creator-m14-a13v-laptop--intel-core-i7---32gb-ram---nvidia-geforce-rtx-4060-graphics---2tb-ssd-in-lunar-gray-66693748/66693748.html",
+          "why_it_fits": "32GB creator laptop candidate with RTX graphics and larger SSD listing for mobile AI/coding workflows.",
+          "important_specs": [
+            "32GB RAM listing",
+            "RTX 4060 listing",
+            "2TB SSD listing"
+          ],
+          "risk_notes": [
+            "Small 14-inch class device may run hot under load.",
+            "Confirm exact seller and configuration.",
+            "May be more expensive than entry-level options."
+          ],
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "slot": 5,
+      "slug": "external-ssd-ai-model-storage",
+      "recommended_candidates": [
+        {
+          "product_name": "SanDisk Extreme Portable SSD 2TB",
+          "brand": "SanDisk",
+          "source_url": "https://www.bestbuy.com/site/sandisk-extreme-portable-2tb-external-usb-c-nvme-portable-solid-state-drive/6427551.p?skuId=6427551",
+          "why_it_fits": "Portable external SSD candidate for carrying local model files, datasets, and project backups.",
+          "important_specs": [
+            "2TB external SSD listing",
+            "USB-C portable drive",
+            "NVMe portable SSD class"
+          ],
+          "risk_notes": [
+            "External SSD speed depends on computer USB port.",
+            "Not a substitute for internal NVMe for all workloads.",
+            "Confirm current model/revision and seller."
+          ],
+          "confidence": "high"
+        },
+        {
+          "product_name": "Crucial X9 Portable SSD 2TB",
+          "brand": "Crucial",
+          "source_url": "https://www.microcenter.com/product/671182/X9_2TB_Portable_SSD_USB_32_Gen_2_Type_C_Solid_State_Drive_-_Black",
+          "why_it_fits": "Beginner-friendly portable SSD candidate for model storage and transfer.",
+          "important_specs": [
+            "2TB portable SSD listing",
+            "USB-C listing",
+            "Up to 1050MB/s class listing"
+          ],
+          "risk_notes": [
+            "Performance depends on host port.",
+            "Not as fast as internal NVMe.",
+            "Confirm current price and availability before approval."
+          ],
+          "confidence": "high"
+        },
+        {
+          "product_name": "Samsung T9 Portable SSD 2TB",
+          "brand": "Samsung",
+          "source_url": "https://www.newegg.com/samsung-t9-2tb-usb-3-2-gen-2x2/p/N82E16820147881",
+          "why_it_fits": "Fast portable SSD candidate for users who move large models and project files between machines.",
+          "important_specs": [
+            "2TB portable SSD listing",
+            "USB 3.2 Gen 2x2 class listing",
+            "Portable external storage"
+          ],
+          "risk_notes": [
+            "Requires compatible port for best speeds.",
+            "May cost more than slower portable SSDs.",
+            "Confirm current seller and availability."
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slot": 6,
+      "slug": "nvme-ssd-ai-workstation",
+      "recommended_candidates": [
+        {
+          "product_name": "WD Black SN770M 2TB NVMe SSD",
+          "brand": "Western Digital",
+          "source_url": "https://www.bestbuy.com/product/wd-black-sn770m-2tb-internal-ssd-pcie-gen-4-x4-m-2-2230-for-rog-ally-and-steam-deck/JXJ62CR8RS/sku/6551144",
+          "why_it_fits": "NVMe SSD candidate, especially for compact devices needing M.2 2230 storage.",
+          "important_specs": [
+            "2TB internal NVMe listing",
+            "PCIe Gen 4 x4 listing",
+            "M.2 2230 form factor listing"
+          ],
+          "risk_notes": [
+            "M.2 2230 is not the standard desktop M.2 2280 size.",
+            "May be the wrong fit for many workstation motherboards.",
+            "Needs more research before approval for this page."
+          ],
+          "confidence": "low"
+        }
+      ]
+    }
+  ],
+  "global_risk_notes": [
+    "Batch 01 candidates are research-only and need Chris review.",
+    "No affiliate links were created.",
+    "No prices, ratings, discounts, or reviews should be copied into the live site without verification.",
+    "Slot 2 needs better true desktop/tower workstation research.",
+    "Slot 6 needs stronger M.2 2280 desktop NVMe candidates before approval."
+  ],
+  "ready_for_chris_review": true,
+  "affiliate_links_created": false,
+  "publish_recommended": false,
+  "git_commit_allowed": false,
+  "git_push_allowed": false,
+  "next_required_gate": "chris_product_candidate_review"
+}

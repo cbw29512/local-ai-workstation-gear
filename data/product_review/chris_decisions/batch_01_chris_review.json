@@ -1,0 +1,48 @@
+{
+  "batch": 1,
+  "status": "chris_review_recorded",
+  "approved_for_draft_pages": [
+    {
+      "slot": 3,
+      "slug": "mac-mini-local-ai-setup",
+      "decision": "approved_for_draft_page",
+      "notes": "Strong fit for quiet beginner local AI setup. No affiliate link approved yet."
+    },
+    {
+      "slot": 5,
+      "slug": "external-ssd-ai-model-storage",
+      "decision": "approved_for_draft_page",
+      "notes": "Strong utility page for model storage. No affiliate link approved yet."
+    }
+  ],
+  "needs_more_research": [
+    {
+      "slot": 2,
+      "slug": "budget-ai-workstation-desktop",
+      "reason": "Needs better true desktop/tower workstation candidates."
+    },
+    {
+      "slot": 6,
+      "slug": "nvme-ssd-ai-workstation",
+      "reason": "Needs standard M.2 2280 workstation NVMe candidates, not only M.2 2230."
+    }
+  ],
+  "needs_manual_review": [
+    {
+      "slot": 1,
+      "slug": "starter-local-ai-mini-pc",
+      "reason": "Candidate looks plausible but exact model/configuration needs manual review."
+    },
+    {
+      "slot": 4,
+      "slug": "ai-laptop-32gb-ram",
+      "reason": "Candidate laptop listings and seller/configuration need manual review."
+    }
+  ],
+  "affiliate_links_approved": false,
+  "product_swap_allowed": false,
+  "git_commit_allowed": false,
+  "git_push_allowed": false,
+  "publish_allowed": false,
+  "next_required_gate": "draft_approved_product_pages"
+}

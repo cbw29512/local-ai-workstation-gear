@@ -1,0 +1,65 @@
+{
+  "created_at": "2026-05-14T12:35:05.631931+00:00",
+  "status": "draft_product_page_created",
+  "slug": "external-ssd-ai-model-storage",
+  "candidate_count": 3,
+  "recommended_candidates": [
+    {
+      "product_name": "SanDisk Extreme Portable SSD 2TB",
+      "brand": "SanDisk",
+      "source_url": "https://www.bestbuy.com/site/sandisk-extreme-portable-2tb-external-usb-c-nvme-portable-solid-state-drive/6427551.p?skuId=6427551",
+      "why_it_fits": "Portable external SSD candidate for carrying local model files, datasets, and project backups.",
+      "important_specs": [
+        "2TB external SSD listing",
+        "USB-C portable drive",
+        "NVMe portable SSD class"
+      ],
+      "risk_notes": [
+        "External SSD speed depends on computer USB port.",
+        "Not a substitute for internal NVMe for all workloads.",
+        "Confirm current model/revision and seller."
+      ],
+      "confidence": "high"
+    },
+    {
+      "product_name": "Crucial X9 Portable SSD 2TB",
+      "brand": "Crucial",
+      "source_url": "https://www.microcenter.com/product/671182/X9_2TB_Portable_SSD_USB_32_Gen_2_Type_C_Solid_State_Drive_-_Black",
+      "why_it_fits": "Beginner-friendly portable SSD candidate for model storage and transfer.",
+      "important_specs": [
+        "2TB portable SSD listing",
+        "USB-C listing",
+        "Up to 1050MB/s class listing"
+      ],
+      "risk_notes": [
+        "Performance depends on host port.",
+        "Not as fast as internal NVMe.",
+        "Confirm current price and availability before approval."
+      ],
+      "confidence": "high"
+    },
+    {
+      "product_name": "Samsung T9 Portable SSD 2TB",
+      "brand": "Samsung",
+      "source_url": "https://www.newegg.com/samsung-t9-2tb-usb-3-2-gen-2x2/p/N82E16820147881",
+      "why_it_fits": "Fast portable SSD candidate for users who move large models and project files between machines.",
+      "important_specs": [
+        "2TB portable SSD listing",
+        "USB 3.2 Gen 2x2 class listing",
+        "Portable external storage"
+      ],
+      "risk_notes": [
+        "Requires compatible port for best speeds.",
+        "May cost more than slower portable SSDs.",
+        "Confirm current seller and availability."
+      ],
+      "confidence": "high"
+    }
+  ],
+  "affiliate_links_created": false,
+  "affiliate_link_changes_allowed": false,
+  "publish_allowed": false,
+  "git_commit_allowed": false,
+  "git_push_allowed": false,
+  "next_required_gate": "draft_page_review"
+}

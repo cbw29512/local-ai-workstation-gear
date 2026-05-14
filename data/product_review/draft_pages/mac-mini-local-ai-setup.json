@@ -1,0 +1,48 @@
+{
+  "created_at": "2026-05-14T12:35:05.632393+00:00",
+  "status": "draft_product_page_created",
+  "slug": "mac-mini-local-ai-setup",
+  "candidate_count": 2,
+  "recommended_candidates": [
+    {
+      "product_name": "Apple Mac mini M4",
+      "brand": "Apple",
+      "source_url": "https://www.apple.com/shop/buy-mac/mac-mini",
+      "why_it_fits": "Quiet compact Mac option for beginners who want Apple Silicon and local AI tooling without a large desktop.",
+      "important_specs": [
+        "Apple M4 family",
+        "Unified memory options",
+        "Compact Mac mini form factor"
+      ],
+      "risk_notes": [
+        "Memory is not user-upgradeable after purchase.",
+        "Not CUDA-based.",
+        "Recommend reviewing memory tier carefully before approval."
+      ],
+      "confidence": "high"
+    },
+    {
+      "product_name": "Apple Mac mini M4 Pro",
+      "brand": "Apple",
+      "source_url": "https://www.apple.com/shop/buy-mac/mac-mini/m4-pro-chip-12-core-cpu-16-core-gpu-24gb-memory-512gb-storage",
+      "why_it_fits": "Better candidate for users who want more headroom than the base Mac mini while staying compact and quiet.",
+      "important_specs": [
+        "M4 Pro configuration listed",
+        "24GB unified memory listing",
+        "512GB storage listing"
+      ],
+      "risk_notes": [
+        "Higher cost than base Mac mini.",
+        "Not upgradeable after purchase.",
+        "Still not a CUDA workstation."
+      ],
+      "confidence": "high"
+    }
+  ],
+  "affiliate_links_created": false,
+  "affiliate_link_changes_allowed": false,
+  "publish_allowed": false,
+  "git_commit_allowed": false,
+  "git_push_allowed": false,
+  "next_required_gate": "draft_page_review"
+}

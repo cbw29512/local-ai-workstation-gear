@@ -1,0 +1,20 @@
+{
+  "status": "awaiting_cloud_ai_product_review",
+  "site": "Local AI Workstation Gear",
+  "source_prompt": "reports/product_research/cloud_ai_product_research_prompt.md",
+  "review_rules": {
+    "no_fake_prices": true,
+    "no_fake_ratings": true,
+    "no_fake_reviews": true,
+    "no_fake_discounts": true,
+    "no_affiliate_links_created_by_ai": true,
+    "manual_link_review_required": true,
+    "human_approval_required_before_publish": true
+  },
+  "approved_for_live_site": false,
+  "affiliate_link_changes_allowed": false,
+  "product_swap_allowed": false,
+  "git_commit_allowed": false,
+  "git_push_allowed": false,
+  "next_required_gate": "paste_cloud_review_results"
+}

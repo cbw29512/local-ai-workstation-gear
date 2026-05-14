@@ -1,0 +1,207 @@
+{
+  "batch": 1,
+  "status": "amazon_only_product_research_completed",
+  "amazon_only": true,
+  "research_only": true,
+  "site": "Local AI Workstation Gear",
+  "slots": [
+    {
+      "slot": 1,
+      "slug": "starter-local-ai-mini-pc",
+      "recommended_candidates": [
+        {
+          "product_name": "Beelink SER9 Pro AI Mini PC",
+          "brand": "Beelink",
+          "amazon_url": "https://www.amazon.com/Beelink-LPDDR5X-8000MHz-PCIe4-0-Speakers/dp/B0DHMWSK91",
+          "asin": "B0DHMWSK91",
+          "why_it_fits": "Amazon-listed compact Ryzen AI mini PC with 32GB memory and 1TB SSD listing; good starter candidate for local AI experiments that do not need a full GPU tower.",
+          "important_specs_to_verify": [
+            "Ryzen AI 9 HX 370",
+            "32GB LPDDR5X",
+            "1TB PCIe SSD",
+            "USB4",
+            "2.5G LAN"
+          ],
+          "risk_notes": [
+            "Integrated graphics, not a dedicated NVIDIA CUDA GPU.",
+            "Confirm exact seller, configuration, and return policy before approval.",
+            "Good beginner candidate, not a high-end model runner."
+          ],
+          "confidence": "medium",
+          "live_eligible_after_chris_affiliate_link_review": false
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "slug": "budget-ai-workstation-desktop",
+      "recommended_candidates": [
+        {
+          "product_name": "RTX 4060 32GB RAM Desktop Candidate",
+          "brand": "To verify on Amazon",
+          "amazon_url": "https://www.amazon.com/s?k=gaming+pc+intel+core+i7+rtx+4060+32gb+ram",
+          "asin": "",
+          "why_it_fits": "Search result points toward RTX 4060 / 32GB RAM desktops that may work as budget AI workstation candidates.",
+          "important_specs_to_verify": [
+            "RTX 4060 or better",
+            "32GB RAM",
+            "1TB SSD",
+            "Known seller/brand",
+            "Upgradeable case and power supply"
+          ],
+          "risk_notes": [
+            "Search-result URL only, not a final product URL.",
+            "Needs exact Amazon product page and ASIN before approval.",
+            "Many budget gaming desktops have weak power supplies or unclear parts."
+          ],
+          "confidence": "low",
+          "live_eligible_after_chris_affiliate_link_review": false
+        }
+      ]
+    },
+    {
+      "slot": 3,
+      "slug": "mac-mini-local-ai-setup",
+      "recommended_candidates": [
+        {
+          "product_name": "Apple 2024 Mac mini Desktop Computer with M4 chip",
+          "brand": "Apple",
+          "amazon_url": "https://www.amazon.com/Apple-2024-Desktop-Computer-10%E2%80%91core/dp/B0DLBX4B1K",
+          "asin": "B0DLBX4B1K",
+          "why_it_fits": "Amazon-listed Mac mini M4 option for quiet local AI workflows using Apple Silicon and unified memory.",
+          "important_specs_to_verify": [
+            "Apple M4",
+            "16GB unified memory",
+            "512GB SSD option",
+            "Mac mini compact desktop"
+          ],
+          "risk_notes": [
+            "Memory is not upgradeable after purchase.",
+            "Not CUDA-based.",
+            "Confirm exact memory/storage configuration before approval."
+          ],
+          "confidence": "high",
+          "live_eligible_after_chris_affiliate_link_review": false
+        }
+      ]
+    },
+    {
+      "slot": 4,
+      "slug": "ai-laptop-32gb-ram",
+      "recommended_candidates": [
+        {
+          "product_name": "Lenovo LOQ 15 RTX 4060 32GB RAM Laptop",
+          "brand": "Lenovo",
+          "amazon_url": "https://www.amazon.com/Lenovo-15AHP9-Gaming-Backlit-Keyboard/dp/B0FL85ZPTW",
+          "asin": "B0FL85ZPTW",
+          "why_it_fits": "Amazon-listed 32GB RAM laptop candidate with RTX 4060-class graphics for portable local AI coding and testing.",
+          "important_specs_to_verify": [
+            "32GB DDR5 RAM",
+            "RTX 4060",
+            "1TB SSD",
+            "Ryzen 7 class CPU",
+            "15.6-inch FHD display"
+          ],
+          "risk_notes": [
+            "Laptop GPU VRAM may still limit larger local models.",
+            "Confirm exact seller and configuration.",
+            "Check thermal/noise reviews before approval."
+          ],
+          "confidence": "medium",
+          "live_eligible_after_chris_affiliate_link_review": false
+        }
+      ]
+    },
+    {
+      "slot": 5,
+      "slug": "external-ssd-ai-model-storage",
+      "recommended_candidates": [
+        {
+          "product_name": "Crucial X9 2TB Portable SSD",
+          "brand": "Crucial",
+          "amazon_url": "https://www.amazon.com/Crucial-2TB-Portable-SSD-CT2000X9SSD902/dp/B0CGW18S6Y",
+          "asin": "B0CGW18S6Y",
+          "why_it_fits": "Amazon-listed 2TB portable SSD candidate for carrying model files, datasets, and local AI project backups.",
+          "important_specs_to_verify": [
+            "2TB capacity",
+            "USB-C",
+            "Portable external SSD",
+            "Up to 1050MB/s class listing"
+          ],
+          "risk_notes": [
+            "External SSD speed depends on host USB port.",
+            "Not a replacement for internal NVMe for all workloads.",
+            "Good beginner storage candidate."
+          ],
+          "confidence": "high",
+          "live_eligible_after_chris_affiliate_link_review": false
+        },
+        {
+          "product_name": "Samsung T9 Portable SSD 2TB",
+          "brand": "Samsung",
+          "amazon_url": "https://www.amazon.com/SAMSUNG-Portable-Professionals-MU-PG2T0B-AM/dp/B0CHFS9K14",
+          "asin": "B0CHFS9K14",
+          "why_it_fits": "Amazon-listed fast 2TB portable SSD for moving large models and project files between machines.",
+          "important_specs_to_verify": [
+            "2TB capacity",
+            "USB 3.2 Gen 2x2",
+            "Portable SSD",
+            "Up to 2000MB/s class listing"
+          ],
+          "risk_notes": [
+            "Requires compatible USB port for best speeds.",
+            "May be more expensive than simpler portable SSDs.",
+            "Good premium storage candidate."
+          ],
+          "confidence": "high",
+          "live_eligible_after_chris_affiliate_link_review": false
+        }
+      ]
+    },
+    {
+      "slot": 6,
+      "slug": "nvme-ssd-ai-workstation",
+      "recommended_candidates": [
+        {
+          "product_name": "WD_BLACK SN850X 2TB NVMe SSD",
+          "brand": "Western Digital",
+          "amazon_url": "https://www.amazon.com/WD_BLACK-SN850X-Internal-Gaming-Solid/dp/B0B7CMZ3QH",
+          "asin": "B0B7CMZ3QH",
+          "why_it_fits": "Amazon-listed M.2 2280 NVMe SSD candidate for fast internal workstation storage.",
+          "important_specs_to_verify": [
+            "2TB capacity",
+            "M.2 2280",
+            "PCIe Gen4",
+            "High read/write speed class"
+          ],
+          "risk_notes": [
+            "Confirm motherboard M.2 compatibility.",
+            "Heatsink/no-heatsink version should match the build.",
+            "Good fit for desktop/workstation storage after compatibility review."
+          ],
+          "confidence": "high",
+          "live_eligible_after_chris_affiliate_link_review": false
+        }
+      ]
+    }
+  ],
+  "rejected_non_amazon_candidates": [
+    "Apple.com Mac mini source",
+    "Best Buy SSD/laptop sources",
+    "Newegg SSD sources",
+    "Walmart/merchant mini PC sources",
+    "Micro Center SSD source"
+  ],
+  "global_risk_notes": [
+    "All candidates must be manually checked on Amazon before affiliate links are created.",
+    "No affiliate links are created in this file.",
+    "Slot 2 is still weak because it uses a search URL and needs an exact Amazon product/ASIN.",
+    "Do not copy prices, ratings, or review counts into the live site unless verified at publish time."
+  ],
+  "ready_for_chris_review": true,
+  "affiliate_links_created": false,
+  "publish_recommended": false,
+  "git_commit_allowed": false,
+  "git_push_allowed": false,
+  "next_required_gate": "chris_amazon_product_candidate_review"
+}
