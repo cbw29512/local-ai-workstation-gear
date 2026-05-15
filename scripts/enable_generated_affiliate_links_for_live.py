@@ -5,11 +5,9 @@ State:
 - Reads approved Amazon link registry.
 - Enables only rows generated from the approved universal Amazon tag.
 - Requires approved_by_chris true and a valid affiliate URL.
-- Does not publish, commit, or push.
 
 Safety:
 - No product swaps.
-- No new affiliate URLs generated here.
 - No commits or pushes.
 - No publishing.
 """
@@ -17,6 +15,7 @@ Safety:
 from __future__ import annotations
 
 import json
+import logging
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -24,17 +23,36 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRY = ROOT / "data/amazon_links/approved_amazon_links.json"
+LOG_FILE = ROOT / "logs/enable_generated_affiliate_links_for_live.log"
 APPROVED_TAG = "maxyourheal06-20"
 
 
+def setup_logging() -> None:
+    """Create enablement log."""
+    LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
+    logging.basicConfig(
+        filename=LOG_FILE,
+        level=logging.INFO,
+        format="%(asctime)s %(levelname)s %(message)s",
+    )
+
+
 def load_json(path: Path) -> dict[str, Any]:
-    """Load JSON safely."""
-    return json.loads(path.read_text(encoding="utf-8"))
+    """Load JSON safely with useful error context."""
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except Exception as exc:
+        logging.exception("Failed to load %s: %s", path, exc)
+        raise
 
 
 def write_json(path: Path, payload: dict[str, Any]) -> None:
     """Write JSON safely."""
-    path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+    try:
+        path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+    except Exception as exc:
+        logging.exception("Failed to write %s: %s", path, exc)
+        raise
 
 
 def can_enable(row: dict[str, Any]) -> tuple[bool, str]:
@@ -66,36 +84,40 @@ def can_enable(row: dict[str, Any]) -> tuple[bool, str]:
 
 def main() -> int:
     """Enable generated affiliate links for live injection."""
-    registry = load_json(REGISTRY)
-    enabled = 0
-    skipped: list[str] = []
-    now = datetime.now(timezone.utc).isoformat()
+    setup_logging()
 
-    for row in registry.get("links", []):
-        ok, reason = can_enable(row)
+    try:
+        registry = load_json(REGISTRY)
+        enabled = 0
+        skipped: list[str] = []
+        now = datetime.now(timezone.utc).isoformat()
 
-        if not ok:
-            skipped.append(reason)
-            continue
+        for row in registry.get("links", []):
+            ok, reason = can_enable(row)
 
-        if row.get("live_enabled") is not True:
-            row["live_enabled"] = True
-            row["live_enabled_at"] = now
-            row["ready_for_page_injection"] = True
-            enabled += 1
+            if not ok:
+                skipped.append(reason)
+                continue
 
-    registry["updated_at"] = now
-    registry["next_required_gate"] = "inject_links_into_pages"
-    registry["publish_allowed"] = False
-    write_json(REGISTRY, registry)
+            if row.get("live_enabled") is not True:
+                row["live_enabled"] = True
+                row["live_enabled_at"] = now
+                row["ready_for_page_injection"] = True
+                enabled += 1
+
+        registry["updated_at"] = now
+        registry["next_required_gate"] = "inject_links_into_pages"
+        registry["publish_allowed"] = False
+        write_json(REGISTRY, registry)
+    except Exception as exc:
+        print("RESULT: ERROR")
+        print(exc)
+        return 1
 
     print("RESULT: PASS")
     print(f"enabled_generated_links: {enabled}")
+    print(f"skipped_count: {len(skipped)}")
     print("next_required_gate: inject_links_into_pages")
-
-    if skipped:
-        print("skipped_count:", len(skipped))
-
     return 0
 
 
