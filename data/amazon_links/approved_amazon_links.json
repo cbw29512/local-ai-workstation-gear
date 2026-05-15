@@ -41,7 +41,8 @@
       "live_enabled": false,
       "button_text": "Check on Amazon",
       "first_added_to_registry_at": null,
-      "last_affiliate_review_at": null
+      "last_affiliate_review_at": null,
+      "affiliate_url": "PASTE_CHRIS_APPROVED_AMAZON_AFFILIATE_URL_HERE"
     },
     {
       "slot": 4,
@@ -80,7 +81,8 @@
       "live_enabled": false,
       "button_text": "Check on Amazon",
       "first_added_to_registry_at": null,
-      "last_affiliate_review_at": null
+      "last_affiliate_review_at": null,
+      "affiliate_url": "PASTE_CHRIS_APPROVED_AMAZON_AFFILIATE_URL_HERE"
     },
     {
       "slot": 8,
@@ -119,7 +121,8 @@
       "live_enabled": false,
       "button_text": "Check on Amazon",
       "first_added_to_registry_at": null,
-      "last_affiliate_review_at": null
+      "last_affiliate_review_at": null,
+      "affiliate_url": "PASTE_CHRIS_APPROVED_AMAZON_AFFILIATE_URL_HERE"
     },
     {
       "slot": 9,

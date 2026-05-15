@@ -38,7 +38,7 @@ def redirect_slug(link: dict[str, Any]) -> str:
 
 def render_redirect(link: dict[str, Any]) -> str:
     """Render one static redirect page."""
-    url = esc(link["approved_affiliate_url"])
+    url = esc(((link.get("approved_affiliate_url") or link.get("affiliate_url")) or link.get("affiliate_url")))
     name = esc(link["product_name"])
 
     return f"""<!doctype html>
