@@ -1,0 +1,49 @@
+{
+  "status": "large_ai_cost_policy_active",
+  "default_provider_mode": "manual_chatgpt",
+  "api_calls_enabled": false,
+  "api_calls_require_chris_approval": true,
+  "hourly_large_ai_calls_allowed": false,
+  "routine_monitoring_provider": "local_ai_only",
+  "allowed_large_ai_tasks": [
+    "cloud_vertical_product_research",
+    "product_candidate_clarification",
+    "risk_review",
+    "schema_repair",
+    "site_strategy_review",
+    "final_pre_publish_review"
+  ],
+  "blocked_large_ai_tasks": [
+    "hourly_status_check",
+    "simple_file_validation",
+    "git_status_check",
+    "timestamp_refresh",
+    "routine_money_monitor",
+    "routine_click_tracking",
+    "automatic_publish",
+    "automatic_affiliate_link_creation",
+    "automatic_product_swap"
+  ],
+  "manual_chatgpt_mode": {
+    "preferred": true,
+    "reason": "Keeps cost down by using copy/paste handoffs for only the requests that need Large AI review."
+  },
+  "future_api_mode_limits": {
+    "daily_request_limit": 3,
+    "monthly_request_limit": 50,
+    "require_task_reason": true,
+    "require_target_file": true,
+    "require_expected_output_schema": true,
+    "write_only_to_staging": true
+  },
+  "safety_locks": {
+    "affiliate_link_changes_allowed": false,
+    "product_swap_allowed": false,
+    "git_commit_allowed": false,
+    "git_push_allowed": false,
+    "publish_allowed": false,
+    "spending_allowed": false,
+    "outreach_allowed": false
+  },
+  "next_required_gate": "manual_large_ai_handoff_only"
+}
