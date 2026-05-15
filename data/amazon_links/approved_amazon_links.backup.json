@@ -41,28 +41,18 @@
       "last_affiliate_review_at": null
     },
     {
-      "slot": 4,
+      "slot": 3,
       "slug": "mac-mini-local-ai-setup",
       "product_name": "Apple 2024 Mac mini Desktop Computer with M4 chip",
       "brand": "Apple",
       "asin": "B0DLBX4B1K",
       "amazon_url": "https://www.amazon.com/Apple-2024-Desktop-Computer-10%E2%80%91core/dp/B0DLBX4B1K",
       "approved_affiliate_url": "PASTE_CHRIS_APPROVED_AMAZON_AFFILIATE_URL_HERE",
-      "approved_by_chris": true,
+      "approved_by_chris": false,
       "live_enabled": false,
       "button_text": "Check on Amazon",
       "first_added_to_registry_at": null,
-      "last_affiliate_review_at": null,
-      "title": "Mac Mini Local AI Setup",
-      "source_amazon_url": "https://www.amazon.com/Apple-2024-Desktop-Computer-10%E2%80%91core/dp/B0DLBX4B1K",
-      "affiliate_url": "https://www.amazon.com/dp/B0DLBX4B1K/ref=nosim?tag=maxyourheal06-20",
-      "generated_from_universal_tag": true,
-      "ready_for_page_injection": true,
-      "product_swap_allowed": false,
-      "git_commit_allowed": false,
-      "git_push_allowed": false,
-      "publish_allowed": false,
-      "updated_at": "2026-05-15T03:32:51.710868+00:00"
+      "last_affiliate_review_at": null
     },
     {
       "slot": 4,
@@ -79,28 +69,18 @@
       "last_affiliate_review_at": null
     },
     {
-      "slot": 8,
+      "slot": 5,
       "slug": "external-ssd-ai-model-storage",
       "product_name": "Crucial X9 2TB Portable SSD",
       "brand": "Crucial",
       "asin": "B0CGW18S6Y",
       "amazon_url": "https://www.amazon.com/Crucial-2TB-Portable-SSD-CT2000X9SSD902/dp/B0CGW18S6Y",
       "approved_affiliate_url": "PASTE_CHRIS_APPROVED_AMAZON_AFFILIATE_URL_HERE",
-      "approved_by_chris": true,
+      "approved_by_chris": false,
       "live_enabled": false,
       "button_text": "Check on Amazon",
       "first_added_to_registry_at": null,
-      "last_affiliate_review_at": null,
-      "title": null,
-      "source_amazon_url": "https://www.amazon.com/Crucial-2TB-Portable-SSD-CT2000X9SSD902/dp/B0CGW18S6Y",
-      "affiliate_url": "https://www.amazon.com/dp/B0CGW18S6Y/ref=nosim?tag=maxyourheal06-20",
-      "generated_from_universal_tag": true,
-      "ready_for_page_injection": true,
-      "product_swap_allowed": false,
-      "git_commit_allowed": false,
-      "git_push_allowed": false,
-      "publish_allowed": false,
-      "updated_at": "2026-05-15T03:32:51.710677+00:00"
+      "last_affiliate_review_at": null
     },
     {
       "slot": 5,
@@ -117,28 +97,18 @@
       "last_affiliate_review_at": null
     },
     {
-      "slot": 9,
+      "slot": 6,
       "slug": "nvme-ssd-ai-workstation",
       "product_name": "WD_BLACK SN850X 2TB NVMe SSD",
-      "brand": "Western Digital / SanDisk",
+      "brand": "Western Digital",
       "asin": "B0B7CMZ3QH",
       "amazon_url": "https://www.amazon.com/WD_BLACK-SN850X-Internal-Gaming-Solid/dp/B0B7CMZ3QH",
       "approved_affiliate_url": "PASTE_CHRIS_APPROVED_AMAZON_AFFILIATE_URL_HERE",
-      "approved_by_chris": true,
+      "approved_by_chris": false,
       "live_enabled": false,
       "button_text": "Check on Amazon",
       "first_added_to_registry_at": null,
-      "last_affiliate_review_at": null,
-      "title": "NVMe SSD for AI Workstations",
-      "source_amazon_url": "https://www.amazon.com/WD_BLACK-SN850X-Internal-Gaming-Solid/dp/B0B7CMZ3QH",
-      "affiliate_url": "https://www.amazon.com/dp/B0B7CMZ3QH/ref=nosim?tag=maxyourheal06-20",
-      "generated_from_universal_tag": true,
-      "ready_for_page_injection": true,
-      "product_swap_allowed": false,
-      "git_commit_allowed": false,
-      "git_push_allowed": false,
-      "publish_allowed": false,
-      "updated_at": "2026-05-15T03:32:51.710863+00:00"
+      "last_affiliate_review_at": null
     }
   ],
   "affiliate_link_changes_allowed": false,
@@ -146,7 +116,7 @@
   "git_commit_allowed": false,
   "git_push_allowed": false,
   "publish_allowed": false,
-  "next_required_gate": "inject_links_into_pages",
+  "next_required_gate": "render_approved_amazon_links",
   "pending_short_links": [
     {
       "url": "https://amzn.to/42Dz8f1",
@@ -155,6 +125,5 @@
       "reason": "Short link provided by Chris; product identity not mapped yet."
     }
   ],
-  "last_updated_at": "2026-05-14T15:44:52.778790+00:00",
-  "updated_at": "2026-05-15T03:32:51.710870+00:00"
+  "last_updated_at": "2026-05-14T15:44:52.778790+00:00"
 }
