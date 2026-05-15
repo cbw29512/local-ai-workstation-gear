@@ -56,6 +56,10 @@ def looks_like_prompt(text: str) -> bool:
         "Active Cloud AI Request",
         "Cloud Vertical Product Research Packet",
         "Find 24 Amazon-only product candidates",
+        "Return ONE raw JSON object only",
+        "Amazon-only affiliate site",
+        "The first character of your response must be {",
+        "The items array must contain exactly 24 objects",
     ]
 
     return any(marker in text for marker in markers)
