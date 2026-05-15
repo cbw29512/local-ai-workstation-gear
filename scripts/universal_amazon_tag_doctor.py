@@ -3,8 +3,8 @@ Validate approved universal Amazon Associates tag.
 
 State:
 - Chris approved one Amazon tag/tracking ID.
-- The system may generate product-specific URLs from approved ASINs.
-- Generated URLs are still not published until live gates pass.
+- AI may generate product-specific Amazon affiliate button URLs from approved ASINs.
+- Publishing still requires separate gates.
 
 Safety:
 - Read-only doctor.
@@ -31,26 +31,34 @@ def main() -> int:
         problems.append("missing approved universal tag file")
     else:
         data = json.loads(TAG_FILE.read_text(encoding="utf-8"))
-        tag = str(data.get("amazon_tag", ""))
+        rules = data.get("rules", {})
 
         if data.get("status") != "approved_universal_amazon_tag_active":
             problems.append("status must be approved_universal_amazon_tag_active")
 
-        if not tag.endswith("-20"):
-            problems.append("amazon_tag should look like a US Associates tracking ID ending in -20")
+        if data.get("amazon_tag") != "maxyourheal06-20":
+            problems.append("amazon_tag must be maxyourheal06-20")
 
         if data.get("approved_by_chris") is not True:
             problems.append("approved_by_chris must be true")
 
-        rules = data.get("rules", {})
-        if rules.get("asin_required") is not True:
-            problems.append("rules.asin_required must be true")
+        if data.get("affiliate_link_generation_allowed") is not True:
+            problems.append("affiliate_link_generation_allowed must be true")
 
-        if data.get("product_swap_allowed") is not False:
-            problems.append("product_swap_allowed must be false")
+        if rules.get("ai_may_generate_affiliate_button_links") is not True:
+            problems.append("AI affiliate button link generation must be allowed")
+
+        if rules.get("manual_sitelink_creation_required") is not False:
+            problems.append("manual_sitelink_creation_required must be false")
+
+        if rules.get("asin_required") is not True:
+            problems.append("ASIN must be required")
 
         if data.get("publish_allowed") is not False:
             problems.append("publish_allowed must be false")
+
+        if data.get("product_swap_allowed") is not False:
+            problems.append("product_swap_allowed must be false")
 
     print("RESULT:")
 
@@ -62,7 +70,8 @@ def main() -> int:
 
     print("UNIVERSAL AMAZON TAG STATE: PASS")
     print("amazon_tag: maxyourheal06-20")
-    print("next_required_gate: generate_approved_affiliate_urls_from_asins")
+    print("ai_may_generate_affiliate_button_links: true")
+    print("next_required_gate: generate_affiliate_urls_from_approved_asins")
     return 0
 
 
