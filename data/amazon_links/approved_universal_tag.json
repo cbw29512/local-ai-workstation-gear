@@ -1,0 +1,22 @@
+{
+  "status": "approved_universal_amazon_tag_active",
+  "amazon_tag": "maxyourheal06-20",
+  "approved_by_chris": true,
+  "allowed_url_format": "https://www.amazon.com/dp/{asin}/ref=nosim?tag={amazon_tag}",
+  "scope": "Generate product-specific Amazon affiliate URLs only from Chris-approved Amazon ASINs.",
+  "rules": {
+    "asin_required": true,
+    "amazon_only": true,
+    "no_non_amazon_merchants": true,
+    "no_prices": true,
+    "no_ratings": true,
+    "no_reviews": true,
+    "human_approval_required_before_live": true
+  },
+  "affiliate_link_changes_allowed": true,
+  "product_swap_allowed": false,
+  "git_commit_allowed": false,
+  "git_push_allowed": false,
+  "publish_allowed": false,
+  "next_required_gate": "generate_approved_affiliate_urls_from_asins"
+}
