@@ -1,0 +1,26 @@
+{
+  "created_at": "2026-05-15T03:18:01.654165+00:00",
+  "status": "large_ai_request_ready",
+  "provider_mode": "manual_chatgpt",
+  "task_type": "cloud_vertical_product_research",
+  "reason": "Home organization vertical needs 24 Amazon-only products.",
+  "source_prompt": "/Users/chris/Code/local-ai-workstation-gear/data/site_portfolio/cloud_vertical_active_prompts/home-organization-active-prompt.md",
+  "target_response": "/Users/chris/Code/local-ai-workstation-gear/data/site_portfolio/cloud_vertical_results/staged-home-organization.json",
+  "api_call_allowed": false,
+  "manual_chatgpt_required": true,
+  "expected_output": {
+    "status": "cloud_vertical_research_completed",
+    "vertical_slug": "home-organization",
+    "items": 24
+  },
+  "safety_locks": {
+    "affiliate_link_changes_allowed": false,
+    "product_swap_allowed": false,
+    "git_commit_allowed": false,
+    "git_push_allowed": false,
+    "publish_allowed": false,
+    "spending_allowed": false,
+    "outreach_allowed": false
+  },
+  "next_required_gate": "paste_large_ai_response"
+}
