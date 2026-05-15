@@ -1,11 +1,12 @@
 """
-Stage cloud vertical research result into the active target file.
+Stage completed cloud vertical research result into the active target file.
 
 State:
 - Reads active cloud vertical handoff.
 - Reads staged result JSON.
 - Verifies staged vertical matches handoff.
-- Copies staged result into active target file.
+- Requires completed 24-item cloud result before copying.
+- Copies staged result into active target file only after validation.
 
 Safety:
 - No affiliate links.
@@ -48,14 +49,9 @@ def load_json(path: Path) -> dict[str, Any]:
         raise
 
 
-def validate_stage(handoff: dict[str, Any], staged: dict[str, Any]) -> list[str]:
-    """Validate staged result before copying."""
+def safety_lock_problems(staged: dict[str, Any]) -> list[str]:
+    """Validate safety locks on staged payload."""
     problems: list[str] = []
-    expected_slug = handoff.get("vertical_slug")
-    actual_slug = staged.get("vertical_slug")
-
-    if actual_slug != expected_slug:
-        problems.append(f"vertical_slug expected {expected_slug!r}, got {actual_slug!r}")
 
     for locked in [
         "affiliate_links_created",
@@ -72,8 +68,32 @@ def validate_stage(handoff: dict[str, Any], staged: dict[str, Any]) -> list[str]
     return problems
 
 
+def validate_stage(handoff: dict[str, Any], staged: dict[str, Any]) -> list[str]:
+    """Validate staged result before copying."""
+    problems: list[str] = []
+    expected_slug = handoff.get("vertical_slug")
+    actual_slug = staged.get("vertical_slug")
+    status = staged.get("status")
+    items = staged.get("items", [])
+
+    if actual_slug != expected_slug:
+        problems.append(f"vertical_slug expected {expected_slug!r}, got {actual_slug!r}")
+
+    if status != "cloud_vertical_research_completed":
+        problems.append(
+            "staged result is not complete yet; expected status "
+            "'cloud_vertical_research_completed'"
+        )
+
+    if len(items) != 24:
+        problems.append(f"completed staged result must have 24 items, got {len(items)}")
+
+    problems.extend(safety_lock_problems(staged))
+    return problems
+
+
 def main() -> int:
-    """Copy staged result into active target file."""
+    """Copy completed staged result into active target file."""
     setup_logging()
 
     try:
@@ -82,9 +102,10 @@ def main() -> int:
         problems = validate_stage(handoff, staged)
 
         if problems:
-            print("RESULT: NEEDS REVIEW")
+            print("RESULT: STOPPED")
             for problem in problems:
                 print(f"- {problem}")
+            print("target result file was not overwritten")
             return 1
 
         target = Path(str(handoff["target_result_file"]))
