@@ -1,99 +1,104 @@
-# Active Cloud AI Request
+You are doing product research for an Amazon-only affiliate site.
 
-Use this full prompt to return the JSON result only.
+Return ONE raw JSON object only.
 
-Do not create affiliate links. Do not publish. Do not invent prices, ratings, reviews, or discounts.
-
----
-
-# Active Cloud Vertical Research Handoff
-
-Status: `cloud_vertical_handoff_ready`
-
-Vertical: `home-organization`
-
-Site angle:
-Simple products that make rooms easier to organize and navigate.
-
-Source packet:
-`/Users/chris/Code/local-ai-workstation-gear/data/site_portfolio/cloud_vertical_packets/home-organization.md`
-
-Target result file:
-`/Users/chris/Code/local-ai-workstation-gear/data/site_portfolio/cloud_vertical_results/home-organization.json`
-
-Required:
-- Exactly `24` Amazon-only products.
-- Status must be `cloud_vertical_research_completed`.
-- Do not create affiliate links.
-- Do not invent prices, ratings, reviews, or discounts.
-- Chris approval is required before site creation or publishing.
-
-Safety locks:
-- Affiliate link changes allowed: `False`
-- Product swap allowed: `False`
-- Git commit allowed: `False`
-- Git push allowed: `False`
-- Publish allowed: `False`
-
-
----
-
-# Cloud Vertical Product Research Packet
+Do not include markdown.
+Do not include code fences.
+Do not include commentary.
+Do not explain your reasoning outside the JSON.
+The first character of your response must be {
+The last character of your response must be }
 
 Vertical: home-organization
 
 Site angle:
 Simple products that make rooms easier to organize and navigate.
 
-## Example Item Angles
+Target result file:
+data/site_portfolio/cloud_vertical_results/home-organization.json
 
+Hard rules:
+- Return exactly 24 product items.
+- Every product must be from Amazon.
+- Every item must include an amazon_url.
+- Prefer direct Amazon product URLs, not search pages or category pages.
+- Include ASIN when you can identify it.
+- If ASIN is uncertain, use an empty string and add a risk note.
+- Do not create affiliate links.
+- Do not invent prices.
+- Do not invent ratings.
+- Do not invent review counts.
+- Do not invent discounts.
+- Do not include medical, legal, financial, safety, or guaranteed-result claims.
+- Do not recommend blocked/regulated categories.
+- Favor useful, item-first pages with simple descriptions.
+- Chris approval is required before any product goes live.
+- publish_recommended must be false.
+- affiliate_links_created must be false.
+- ready_for_chris_review should be true only if all 24 items follow these rules.
+
+Preferred item angles:
 - entryway drop zone
 - closet organization
 - cord and cable cleanup
 - under-sink storage
+- drawer organization
+- pantry organization
+- laundry room organization
+- bathroom counter organization
+- small-space storage
+- garage shelf organization
+- toy/kids room cleanup
+- bedroom storage
+- office cable cleanup
+- cleaning supply storage
 
-## Task For Large/Cloud AI
+Required JSON shape:
 
-Find 24 Amazon-only product candidates for this vertical.
+{
+  "vertical_slug": "home-organization",
+  "status": "cloud_vertical_research_completed",
+  "recommended_site_name": "",
+  "definition_of_done": [
+    "24 item-first Amazon product pages",
+    "One funnel/controller index page",
+    "Amazon-only product URLs/ASINs",
+    "FTC/Amazon disclosure",
+    "No prices/ratings/reviews unless verified"
+  ],
+  "items": [
+    {
+      "slot": 1,
+      "page_slug": "",
+      "page_title": "",
+      "product_name": "",
+      "brand": "",
+      "asin": "",
+      "amazon_url": "",
+      "why_it_fits": "",
+      "item_angle": "",
+      "important_specs_to_verify": [],
+      "risk_notes": [],
+      "confidence": "low|medium|high"
+    }
+  ],
+  "global_risk_notes": [],
+  "ready_for_chris_review": true,
+  "affiliate_links_created": false,
+  "publish_recommended": false,
+  "affiliate_link_changes_allowed": false,
+  "product_swap_allowed": false,
+  "git_commit_allowed": false,
+  "git_push_allowed": false,
+  "publish_allowed": false,
+  "next_required_gate": "chris_vertical_site_approval"
+}
 
-## Hard Rules
-
-- Amazon-only.
-- Each candidate must include an Amazon URL.
-- ASIN is required when available.
-- Do not create affiliate links.
-- Do not invent prices.
-- Do not invent ratings.
-- Do not invent reviews.
-- Do not invent discounts.
-- Do not recommend blocked categories.
-- Avoid medical, legal, financial, or safety claims.
-- Favor useful, item-first pages with clear descriptions.
-- Chris approval is required before any product goes live.
-
-## Required Output Shape
-
-Return JSON with:
-- vertical_slug
-- status: cloud_vertical_research_completed
-- recommended_site_name
-- definition_of_done
-- items: 24 rows
-- global_risk_notes
-- ready_for_chris_review
-- affiliate_links_created: false
-- publish_recommended: false
-
-Each item row must include:
-- slot
-- page_slug
-- page_title
-- product_name
-- brand
-- asin
-- amazon_url
-- why_it_fits
-- item_angle
-- important_specs_to_verify
-- risk_notes
-- confidence
+Output requirements:
+- The items array must contain exactly 24 objects.
+- slot values must be 1 through 24.
+- page_slug values must be lowercase, URL-safe, and unique.
+- page_title values should sound useful and item-first.
+- why_it_fits should be concise and practical.
+- risk_notes should mention verification concerns, compatibility, sizing, installation, durability, or claim limits when relevant.
+- confidence must be only low, medium, or high.
