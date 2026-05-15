@@ -52,7 +52,7 @@
       "amazon_url": "https://www.amazon.com/Apple-2024-Desktop-Computer-10%E2%80%91core/dp/B0DLBX4B1K",
       "approved_affiliate_url": "PASTE_CHRIS_APPROVED_AMAZON_AFFILIATE_URL_HERE",
       "approved_by_chris": true,
-      "live_enabled": false,
+      "live_enabled": true,
       "button_text": "Check on Amazon",
       "first_added_to_registry_at": null,
       "last_affiliate_review_at": null,
@@ -65,7 +65,8 @@
       "git_commit_allowed": false,
       "git_push_allowed": false,
       "publish_allowed": false,
-      "updated_at": "2026-05-15T03:32:51.710868+00:00"
+      "updated_at": "2026-05-15T03:32:51.710868+00:00",
+      "live_enabled_at": "2026-05-15T03:40:12.922028+00:00"
     },
     {
       "slot": 4,
@@ -90,7 +91,7 @@
       "amazon_url": "https://www.amazon.com/Crucial-2TB-Portable-SSD-CT2000X9SSD902/dp/B0CGW18S6Y",
       "approved_affiliate_url": "PASTE_CHRIS_APPROVED_AMAZON_AFFILIATE_URL_HERE",
       "approved_by_chris": true,
-      "live_enabled": false,
+      "live_enabled": true,
       "button_text": "Check on Amazon",
       "first_added_to_registry_at": null,
       "last_affiliate_review_at": null,
@@ -103,7 +104,8 @@
       "git_commit_allowed": false,
       "git_push_allowed": false,
       "publish_allowed": false,
-      "updated_at": "2026-05-15T03:32:51.710677+00:00"
+      "updated_at": "2026-05-15T03:32:51.710677+00:00",
+      "live_enabled_at": "2026-05-15T03:40:12.922028+00:00"
     },
     {
       "slot": 5,
@@ -128,7 +130,7 @@
       "amazon_url": "https://www.amazon.com/WD_BLACK-SN850X-Internal-Gaming-Solid/dp/B0B7CMZ3QH",
       "approved_affiliate_url": "PASTE_CHRIS_APPROVED_AMAZON_AFFILIATE_URL_HERE",
       "approved_by_chris": true,
-      "live_enabled": false,
+      "live_enabled": true,
       "button_text": "Check on Amazon",
       "first_added_to_registry_at": null,
       "last_affiliate_review_at": null,
@@ -141,7 +143,8 @@
       "git_commit_allowed": false,
       "git_push_allowed": false,
       "publish_allowed": false,
-      "updated_at": "2026-05-15T03:32:51.710863+00:00"
+      "updated_at": "2026-05-15T03:32:51.710863+00:00",
+      "live_enabled_at": "2026-05-15T03:40:12.922028+00:00"
     }
   ],
   "affiliate_link_changes_allowed": false,
@@ -159,5 +162,5 @@
     }
   ],
   "last_updated_at": "2026-05-14T15:44:52.778790+00:00",
-  "updated_at": "2026-05-15T03:32:51.710870+00:00"
+  "updated_at": "2026-05-15T03:40:12.922028+00:00"
 }
