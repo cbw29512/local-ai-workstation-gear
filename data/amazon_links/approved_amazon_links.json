@@ -24,7 +24,10 @@
       "button_text": "Check on Amazon",
       "first_added_to_registry_at": "2026-05-14T15:44:52.778790+00:00",
       "last_affiliate_review_at": "2026-05-14T15:44:52.778790+00:00",
-      "notes": "Chris directly provided this Amazon Associates URL."
+      "notes": "Chris directly provided this Amazon Associates URL.",
+      "affiliate_url": "https://www.amazon.com/dp/B0GHNDHGP5/ref=nosim?tag=maxyourheal06-20",
+      "generated_from_universal_tag": true,
+      "ready_for_page_injection": true
     },
     {
       "slot": 2,
