@@ -1,0 +1,41 @@
+{
+  "status": "large_ai_bridge_active",
+  "provider_mode": "manual_chatgpt",
+  "large_ai_role": "cloud_research_and_review",
+  "description": "The large AI reviews local AI prompts, returns structured JSON, and never publishes or changes affiliate links directly.",
+  "allowed_tasks": [
+    "product_research",
+    "candidate_clarification",
+    "risk_review",
+    "schema_repair",
+    "site_strategy_review",
+    "cloud_handoff_review"
+  ],
+  "blocked_actions": [
+    "affiliate_link_creation",
+    "publishing",
+    "git_commit",
+    "git_push",
+    "product_swap",
+    "spending",
+    "outreach",
+    "account_creation",
+    "credential_use"
+  ],
+  "safety_rules": {
+    "human_approval_required": true,
+    "affiliate_link_changes_allowed": false,
+    "product_swap_allowed": false,
+    "git_commit_allowed": false,
+    "git_push_allowed": false,
+    "publish_allowed": false,
+    "spending_allowed": false,
+    "outreach_allowed": false
+  },
+  "manual_workflow": {
+    "input_file": "data/large_ai_bridge/current_request.md",
+    "output_file": "data/large_ai_bridge/current_response.json",
+    "instruction": "Paste current_request.md into ChatGPT. Paste ChatGPT JSON response into current_response.json. Run bridge doctor before importing."
+  },
+  "next_required_gate": "large_ai_response_paste"
+}

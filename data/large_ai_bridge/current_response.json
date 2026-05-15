@@ -1,0 +1,12 @@
+{
+  "status": "awaiting_large_ai_response",
+  "response_type": "",
+  "ready_for_local_import": false,
+  "affiliate_links_created": false,
+  "publish_recommended": false,
+  "product_swap_allowed": false,
+  "git_commit_allowed": false,
+  "git_push_allowed": false,
+  "publish_allowed": false,
+  "next_required_gate": "paste_large_ai_response"
+}
