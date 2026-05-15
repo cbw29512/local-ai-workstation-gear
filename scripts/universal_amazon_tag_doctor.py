@@ -16,49 +16,79 @@ Safety:
 from __future__ import annotations
 
 import json
+import logging
 from pathlib import Path
+from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
 TAG_FILE = ROOT / "data/amazon_links/approved_universal_tag.json"
+LOG_FILE = ROOT / "logs/universal_amazon_tag_doctor.log"
+
+
+def setup_logging() -> None:
+    """Create doctor log."""
+    LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
+    logging.basicConfig(
+        filename=LOG_FILE,
+        level=logging.INFO,
+        format="%(asctime)s %(levelname)s %(message)s",
+    )
+
+
+def load_json(path: Path) -> dict[str, Any]:
+    """Load JSON with useful error context."""
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except Exception as exc:
+        logging.exception("Failed to load %s: %s", path, exc)
+        raise
+
+
+def validate(data: dict[str, Any]) -> list[str]:
+    """Validate universal tag policy."""
+    problems: list[str] = []
+    rules = data.get("rules", {})
+
+    if data.get("status") != "approved_universal_amazon_tag_active":
+        problems.append("status must be approved_universal_amazon_tag_active")
+
+    if data.get("amazon_tag") != "maxyourheal06-20":
+        problems.append("amazon_tag must be maxyourheal06-20")
+
+    if data.get("approved_by_chris") is not True:
+        problems.append("approved_by_chris must be true")
+
+    if data.get("affiliate_link_generation_allowed") is not True:
+        problems.append("affiliate_link_generation_allowed must be true")
+
+    if rules.get("ai_may_generate_affiliate_button_links") is not True:
+        problems.append("AI affiliate button link generation must be allowed")
+
+    if rules.get("manual_sitelink_creation_required") is not False:
+        problems.append("manual_sitelink_creation_required must be false")
+
+    if rules.get("asin_required") is not True:
+        problems.append("ASIN must be required")
+
+    for locked in ["product_swap_allowed", "git_commit_allowed", "git_push_allowed", "publish_allowed"]:
+        if data.get(locked) is not False:
+            problems.append(f"{locked} must be false")
+
+    return problems
 
 
 def main() -> int:
-    """Validate universal Amazon tag policy."""
-    problems: list[str] = []
+    """Run universal tag doctor."""
+    setup_logging()
 
-    if not TAG_FILE.is_file():
-        problems.append("missing approved universal tag file")
-    else:
-        data = json.loads(TAG_FILE.read_text(encoding="utf-8"))
-        rules = data.get("rules", {})
-
-        if data.get("status") != "approved_universal_amazon_tag_active":
-            problems.append("status must be approved_universal_amazon_tag_active")
-
-        if data.get("amazon_tag") != "maxyourheal06-20":
-            problems.append("amazon_tag must be maxyourheal06-20")
-
-        if data.get("approved_by_chris") is not True:
-            problems.append("approved_by_chris must be true")
-
-        if data.get("affiliate_link_generation_allowed") is not True:
-            problems.append("affiliate_link_generation_allowed must be true")
-
-        if rules.get("ai_may_generate_affiliate_button_links") is not True:
-            problems.append("AI affiliate button link generation must be allowed")
-
-        if rules.get("manual_sitelink_creation_required") is not False:
-            problems.append("manual_sitelink_creation_required must be false")
-
-        if rules.get("asin_required") is not True:
-            problems.append("ASIN must be required")
-
-        if data.get("publish_allowed") is not False:
-            problems.append("publish_allowed must be false")
-
-        if data.get("product_swap_allowed") is not False:
-            problems.append("product_swap_allowed must be false")
+    try:
+        problems = validate(load_json(TAG_FILE))
+    except Exception as exc:
+        print("RESULT:")
+        print("UNIVERSAL AMAZON TAG STATE: NEEDS REVIEW")
+        print(f"- {exc}")
+        return 1
 
     print("RESULT:")
 

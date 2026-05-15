@@ -3,7 +3,7 @@
   "amazon_tag": "maxyourheal06-20",
   "approved_by_chris": true,
   "allowed_url_format": "https://www.amazon.com/dp/{asin}/ref=nosim?tag={amazon_tag}",
-  "scope": "AI may generate product-specific Amazon affiliate URLs from approved Amazon ASINs using Chris-approved universal tag.",
+  "scope": "AI may generate product-specific Amazon affiliate button URLs from approved Amazon ASINs using Chris-approved universal tag.",
   "rules": {
     "asin_required": true,
     "amazon_only": true,
