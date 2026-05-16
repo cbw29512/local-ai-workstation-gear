@@ -18,3 +18,4 @@ cd /Users/chris/Code/local-ai-workstation-gear
 /usr/bin/python3 scripts/cloud_vertical_result_doctor.py
 /usr/bin/python3 scripts/hourly_money_operator.py
 /usr/bin/python3 scripts/hourly_traffic_operator.py
+/usr/bin/python3 scripts/hourly_site_webmaster_operator.py
