@@ -47,13 +47,16 @@ def has_any(text: str, needles: list[str]) -> bool:
 
 
 def affiliate_marker_present(html: str, row: dict[str, Any]) -> bool:
-    """Return true when direct link or redirect link is present."""
+    """Return true when direct Amazon link or local redirect link is present."""
+    local_redirect = redirect_slug(row)
+
     markers = [
         row.get("affiliate_url"),
         row.get("approved_affiliate_url"),
-        redirect_slug(row),
-        f"/out/{redirect_slug(row)}",
-        f"out/{redirect_slug(row)}",
+        local_redirect,
+        f"/out/{local_redirect}",
+        f"out/{local_redirect}",
+        f"docs/out/{local_redirect}",
     ]
 
     return has_any(html, markers)
