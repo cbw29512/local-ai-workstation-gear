@@ -33,17 +33,36 @@ def page_path(slug: str) -> Path:
     return ROOT / "sites" / slug / "index.html"
 
 
+def redirect_slug(row: dict[str, Any]) -> str:
+    """Build expected local redirect slug."""
+    slug = str(row.get("slug", ""))
+    asin = str(row.get("asin") or "amazon")
+    return f"{slug}-{asin}".lower()
+
+
 def has_any(text: str, needles: list[str]) -> bool:
     """Return true when any marker exists."""
     lowered = text.lower()
-    return any(needle.lower() in lowered for needle in needles)
+    return any(str(needle).lower() in lowered for needle in needles if needle)
+
+
+def affiliate_marker_present(html: str, row: dict[str, Any]) -> bool:
+    """Return true when direct link or redirect link is present."""
+    markers = [
+        row.get("affiliate_url"),
+        row.get("approved_affiliate_url"),
+        redirect_slug(row),
+        f"/out/{redirect_slug(row)}",
+        f"out/{redirect_slug(row)}",
+    ]
+
+    return has_any(html, markers)
 
 
 def check_page(row: dict[str, Any]) -> dict[str, Any]:
     """Check one live page."""
     slug = str(row.get("slug", ""))
     asin = str(row.get("asin", ""))
-    affiliate_url = str(row.get("affiliate_url") or "")
     path = page_path(slug)
     problems: list[str] = []
     notes: list[str] = []
@@ -61,7 +80,7 @@ def check_page(row: dict[str, Any]) -> dict[str, Any]:
 
     checks = {
         "amazon_disclosure": has_any(html, ["Amazon Associate", "qualifying purchases"]),
-        "affiliate_url_present": affiliate_url in html,
+        "affiliate_or_redirect_link_present": affiliate_marker_present(html, row),
         "asin_present": asin in html,
         "click_tracking_present": has_any(html, ["data-affiliate", "affiliate-click", "analytics"]),
         "cta_present": has_any(html, ["href=", "button", "view on amazon", "amazon"]),
